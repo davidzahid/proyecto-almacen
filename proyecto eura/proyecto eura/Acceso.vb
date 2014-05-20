@@ -4,7 +4,10 @@
         If (empleado(txtUsuario.Text, txtContrasena.Text)) Then
             value.Text = 2
             asignar(value.Text)
+
+
             Panel.Show()
+
 
         Else
             MessageBox.Show("ACCESO INCORRECTO")

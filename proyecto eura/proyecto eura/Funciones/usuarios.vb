@@ -3,6 +3,7 @@ Module usuarios
     'variable global
     Dim conexion As New MySqlConnection
     Dim oconexion As New MySqlConnection
+    Dim comandos As New MySqlCommand
 
     Function empleado(ByVal usuario As String, ByVal password As String) As Boolean
         'funcion para usuarios'
@@ -67,7 +68,7 @@ Module usuarios
 
 
 
-    Private Sub conectar()
+    Public Sub conectar()
 
         Dim servidor As String = "localhost"
         Dim baseDatos As String = "eura_database"
@@ -107,4 +108,7 @@ Module usuarios
         End Try
 
     End Sub
+
+
+
 End Module
