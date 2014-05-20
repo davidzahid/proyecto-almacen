@@ -4,24 +4,39 @@
 
         If (value = 1) Then
 
-            Panel.Button1.Enabled = True
+
             'HABILITAR CERRAR SESION ADMIN'
-            Panel.Administrador.Enabled = False
-            Panel.Administrador.Visible = False
-            Panel.btnCerrar.Enabled = True
-            Panel.btnCerrar.Visible = True
+            Panel.AdministradorToolStripMenuItem.Enabled = False
+            Panel.AdministradorToolStripMenuItem.Visible = False
+            Panel.CerrarSesiónToolStripMenuItem.Enabled = True
+            Panel.CerrarSesiónToolStripMenuItem.Visible = True
+
+            'ELEMENTOS DEL MENU HABILITADOS
+
+            Panel.ProveedoresToolStripMenuItem.Visible = True
+            Panel.ProveedoresToolStripMenuItem.Enabled = True
+            Panel.ReportesToolStripMenuItem.Visible = True
+            Panel.ReportesToolStripMenuItem.Enabled = True
+            Panel.EmpleadosToolStripMenuItem.Visible = True
+            Panel.EmpleadosToolStripMenuItem.Enabled = True
 
 
             'EMPLEADOS     
         ElseIf (value = 2) Then
 
-            Panel.Button1.Enabled = False
-
+       
             'HABILITAR CERRAR SESION ADMIN'
-            Panel.btnCerrar.Enabled = False
-            Panel.btnCerrar.Visible = False
+            Panel.CerrarSesiónToolStripMenuItem.Enabled = False
+            Panel.CerrarSesiónToolStripMenuItem.Visible = False
+            '
+            'ELEMENTOS DEL MENU DESHABILITADOS
 
-
+            Panel.ProveedoresToolStripMenuItem.Visible = False
+            Panel.ProveedoresToolStripMenuItem.Enabled = False
+            Panel.ReportesToolStripMenuItem.Visible = False
+            Panel.ReportesToolStripMenuItem.Enabled = False
+            Panel.EmpleadosToolStripMenuItem.Visible = False
+            Panel.EmpleadosToolStripMenuItem.Enabled = False
 
             Return False
 

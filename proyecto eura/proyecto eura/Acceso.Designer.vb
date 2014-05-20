@@ -23,6 +23,7 @@ Partial Class Acceso
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Acceso))
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.txtContrasena = New System.Windows.Forms.TextBox()
         Me.btnAcceder = New System.Windows.Forms.Button()
@@ -58,60 +59,77 @@ Partial Class Acceso
         Me.Movimientos_sistemaTableAdapter = New proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtPuesto = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.EmpleadoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Movimientos_sistemaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Movimientos_sistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(118, 27)
+        Me.txtUsuario.Location = New System.Drawing.Point(269, 26)
+        Me.txtUsuario.MaxLength = 30
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(100, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(131, 20)
         Me.txtUsuario.TabIndex = 0
         '
         'txtContrasena
         '
-        Me.txtContrasena.Location = New System.Drawing.Point(118, 73)
+        Me.txtContrasena.Location = New System.Drawing.Point(296, 66)
+        Me.txtContrasena.MaxLength = 16
         Me.txtContrasena.Name = "txtContrasena"
-        Me.txtContrasena.Size = New System.Drawing.Size(100, 20)
+        Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContrasena.Size = New System.Drawing.Size(104, 20)
         Me.txtContrasena.TabIndex = 1
         '
         'btnAcceder
         '
-        Me.btnAcceder.Location = New System.Drawing.Point(44, 121)
+        Me.btnAcceder.BackColor = System.Drawing.Color.White
+        Me.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAcceder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAcceder.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.btnAcceder.Location = New System.Drawing.Point(205, 132)
         Me.btnAcceder.Name = "btnAcceder"
-        Me.btnAcceder.Size = New System.Drawing.Size(75, 23)
+        Me.btnAcceder.Size = New System.Drawing.Size(93, 34)
         Me.btnAcceder.TabIndex = 2
         Me.btnAcceder.Text = "Entrar"
-        Me.btnAcceder.UseVisualStyleBackColor = True
+        Me.btnAcceder.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(143, 121)
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.btnCancelar.Location = New System.Drawing.Point(307, 132)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(93, 34)
         Me.btnCancelar.TabIndex = 3
         Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(41, 33)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(188, 26)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.Size = New System.Drawing.Size(64, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Usuario"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(41, 73)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(188, 66)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(92, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Contraseña"
         '
@@ -119,7 +137,7 @@ Partial Class Acceso
         '
         Me.value.AutoSize = True
         Me.value.Enabled = False
-        Me.value.Location = New System.Drawing.Point(49, 100)
+        Me.value.Location = New System.Drawing.Point(216, 105)
         Me.value.Name = "value"
         Me.value.Size = New System.Drawing.Size(0, 13)
         Me.value.TabIndex = 5
@@ -127,7 +145,7 @@ Partial Class Acceso
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(350, 26)
+        Me.txtId.Location = New System.Drawing.Point(630, 73)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
         Me.txtId.TabIndex = 6
@@ -135,7 +153,7 @@ Partial Class Acceso
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
-        Me.lblDescripcion.Location = New System.Drawing.Point(311, 66)
+        Me.lblDescripcion.Location = New System.Drawing.Point(591, 113)
         Me.lblDescripcion.Name = "lblDescripcion"
         Me.lblDescripcion.Size = New System.Drawing.Size(97, 13)
         Me.lblDescripcion.TabIndex = 7
@@ -144,7 +162,7 @@ Partial Class Acceso
         'lblFecha
         '
         Me.lblFecha.AutoSize = True
-        Me.lblFecha.Location = New System.Drawing.Point(313, 84)
+        Me.lblFecha.Location = New System.Drawing.Point(593, 131)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(34, 13)
         Me.lblFecha.TabIndex = 8
@@ -152,7 +170,7 @@ Partial Class Acceso
         '
         'txtEmpleado
         '
-        Me.txtEmpleado.Location = New System.Drawing.Point(350, 107)
+        Me.txtEmpleado.Location = New System.Drawing.Point(630, 154)
         Me.txtEmpleado.Name = "txtEmpleado"
         Me.txtEmpleado.Size = New System.Drawing.Size(100, 20)
         Me.txtEmpleado.TabIndex = 9
@@ -163,7 +181,7 @@ Partial Class Acceso
         Me.EmpleadoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.EmpleadoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.EmpleadoDataGridView.DataSource = Me.EmpleadoBindingSource
-        Me.EmpleadoDataGridView.Location = New System.Drawing.Point(316, 166)
+        Me.EmpleadoDataGridView.Location = New System.Drawing.Point(596, 213)
         Me.EmpleadoDataGridView.Name = "EmpleadoDataGridView"
         Me.EmpleadoDataGridView.Size = New System.Drawing.Size(300, 82)
         Me.EmpleadoDataGridView.TabIndex = 12
@@ -220,7 +238,7 @@ Partial Class Acceso
         Me.Movimientos_sistemaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Movimientos_sistemaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
         Me.Movimientos_sistemaDataGridView.DataSource = Me.Movimientos_sistemaBindingSource
-        Me.Movimientos_sistemaDataGridView.Location = New System.Drawing.Point(315, 254)
+        Me.Movimientos_sistemaDataGridView.Location = New System.Drawing.Point(595, 301)
         Me.Movimientos_sistemaDataGridView.Name = "Movimientos_sistemaDataGridView"
         Me.Movimientos_sistemaDataGridView.Size = New System.Drawing.Size(300, 85)
         Me.Movimientos_sistemaDataGridView.TabIndex = 12
@@ -263,7 +281,7 @@ Partial Class Acceso
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(315, 26)
+        Me.Label3.Location = New System.Drawing.Point(595, 73)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(18, 13)
         Me.Label3.TabIndex = 13
@@ -272,7 +290,7 @@ Partial Class Acceso
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(312, 110)
+        Me.Label4.Location = New System.Drawing.Point(592, 157)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(29, 13)
         Me.Label4.TabIndex = 14
@@ -281,7 +299,7 @@ Partial Class Acceso
         'lblTipo
         '
         Me.lblTipo.AutoSize = True
-        Me.lblTipo.Location = New System.Drawing.Point(313, 53)
+        Me.lblTipo.Location = New System.Drawing.Point(593, 100)
         Me.lblTipo.Name = "lblTipo"
         Me.lblTipo.Size = New System.Drawing.Size(33, 13)
         Me.lblTipo.TabIndex = 15
@@ -305,7 +323,7 @@ Partial Class Acceso
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(312, 141)
+        Me.Label5.Location = New System.Drawing.Point(592, 188)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(40, 13)
         Me.Label5.TabIndex = 16
@@ -313,16 +331,31 @@ Partial Class Acceso
         '
         'txtPuesto
         '
-        Me.txtPuesto.Location = New System.Drawing.Point(358, 134)
+        Me.txtPuesto.Location = New System.Drawing.Point(638, 181)
         Me.txtPuesto.Name = "txtPuesto"
         Me.txtPuesto.Size = New System.Drawing.Size(100, 20)
         Me.txtPuesto.TabIndex = 17
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.Location = New System.Drawing.Point(-45, -29)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(308, 280)
+        Me.PictureBox1.TabIndex = 18
+        Me.PictureBox1.TabStop = False
+        '
         'Acceso
         '
+        Me.AcceptButton = Me.btnAcceder
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(241, 174)
+        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.CancelButton = Me.btnCancelar
+        Me.ClientSize = New System.Drawing.Size(412, 189)
         Me.Controls.Add(Me.txtPuesto)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lblTipo)
@@ -341,7 +374,8 @@ Partial Class Acceso
         Me.Controls.Add(Me.btnAcceder)
         Me.Controls.Add(Me.txtContrasena)
         Me.Controls.Add(Me.txtUsuario)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Acceso"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Acceso"
@@ -350,6 +384,7 @@ Partial Class Acceso
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Movimientos_sistemaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Movimientos_sistemaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -389,5 +424,6 @@ Partial Class Acceso
     Friend WithEvents lblTipo As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtPuesto As System.Windows.Forms.TextBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class
