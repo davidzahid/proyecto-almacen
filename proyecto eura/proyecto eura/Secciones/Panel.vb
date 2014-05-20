@@ -11,7 +11,7 @@
     End Sub
 
     Private Sub Administrador_Click(sender As Object, e As EventArgs) Handles Administrador.Click
-        accesoadmin.Show()
+        Acceso.Show()
 
     End Sub
 

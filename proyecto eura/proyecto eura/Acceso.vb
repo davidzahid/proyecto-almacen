@@ -86,8 +86,8 @@
     End Sub
 
     Private Sub Acceso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtUsuario.Text = ""
-        txtContrasena.Text = ""
+        txtUsuario.Text = "Em14457"
+        txtContrasena.Text = "14747"
         'TODO: esta línea de código carga datos en la tabla 'Movimientos.movimientos_sistema' Puede moverla o quitarla según sea necesario.
         Me.Movimientos_sistemaTableAdapter.Fill(Me.Movimientos.movimientos_sistema)
         'TODO: esta línea de código carga datos en la tabla 'Movimientos.empleado' Puede moverla o quitarla según sea necesario.
