@@ -6,6 +6,8 @@
 
             Panel.Button1.Enabled = True
             'HABILITAR CERRAR SESION ADMIN'
+            Panel.Administrador.Enabled = False
+            Panel.Administrador.Visible = False
             Panel.btnCerrar.Enabled = True
             Panel.btnCerrar.Visible = True
 

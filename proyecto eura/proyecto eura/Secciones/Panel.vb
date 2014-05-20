@@ -18,5 +18,12 @@
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         value.Text = 2
         asignar(value.Text)
+        'Limpiamos valores'
+        Acceso.txtUsuario.Text = ""
+        Acceso.txtContrasena.Text = ""
+        'Mostramos acceso nuevamente'
+        Acceso.Show()
+        Me.Close()
+
     End Sub
 End Class

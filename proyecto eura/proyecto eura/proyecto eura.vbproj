@@ -83,6 +83,14 @@
     </Compile>
     <Compile Include="Funciones\roles.vb" />
     <Compile Include="Funciones\usuarios.vb" />
+    <Compile Include="movimientos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>movimientos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="movimientos.vb">
+      <DependentUpon>movimientos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Secciones\accesoadmin.Designer.vb">
       <DependentUpon>accesoadmin.vb</DependentUpon>
     </Compile>
@@ -129,6 +137,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="movimientos.xsc">
+      <DependentUpon>movimientos.xsd</DependentUpon>
+    </None>
+    <None Include="movimientos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>movimientos.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="movimientos.xss">
+      <DependentUpon>movimientos.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

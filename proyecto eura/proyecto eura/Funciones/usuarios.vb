@@ -25,7 +25,7 @@ Module usuarios
 
                 sw = True
             Else
-                MessageBox.Show("Sin acceso")
+
                 sw = False
             End If
         Catch ex As Exception
@@ -55,7 +55,7 @@ Module usuarios
 
                 sw = True
             Else
-                MessageBox.Show("Sin acceso")
+
                 sw = False
             End If
         Catch ex As Exception
