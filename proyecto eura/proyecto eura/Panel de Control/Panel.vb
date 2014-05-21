@@ -8,7 +8,7 @@
         Acceso.txtContrasena.Text = ""
         'Mostramos acceso nuevamente'
         'accesoadmin.Show()
-        Acceso.ShowDialog()
+        Acceso.Show()
 
 
 
