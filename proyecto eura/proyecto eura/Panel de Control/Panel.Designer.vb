@@ -49,6 +49,10 @@ Partial Class Panel
         Me.MovimientossistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Movimientos_sistemaTableAdapter = New proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter()
         Me.movimientos_sistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EntradasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,7 +181,7 @@ Partial Class Panel
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimientosToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimientosToolStripMenuItem, Me.EntradasToolStripMenuItem, Me.SalidasToolStripMenuItem, Me.ProveedoresToolStripMenuItem1, Me.EmpleadosToolStripMenuItem1})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -219,6 +223,30 @@ Partial Class Panel
         '
         Me.movimientos_sistemaBindingSource.DataMember = "movimientos_sistema"
         Me.movimientos_sistemaBindingSource.DataSource = Me.Movimientos
+        '
+        'EntradasToolStripMenuItem
+        '
+        Me.EntradasToolStripMenuItem.Name = "EntradasToolStripMenuItem"
+        Me.EntradasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EntradasToolStripMenuItem.Text = "Entradas"
+        '
+        'SalidasToolStripMenuItem
+        '
+        Me.SalidasToolStripMenuItem.Name = "SalidasToolStripMenuItem"
+        Me.SalidasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalidasToolStripMenuItem.Text = "Salidas"
+        '
+        'ProveedoresToolStripMenuItem1
+        '
+        Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
+        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
+        '
+        'EmpleadosToolStripMenuItem1
+        '
+        Me.EmpleadosToolStripMenuItem1.Name = "EmpleadosToolStripMenuItem1"
+        Me.EmpleadosToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.EmpleadosToolStripMenuItem1.Text = "Empleados"
         '
         'Panel
         '
@@ -268,4 +296,8 @@ Partial Class Panel
     Friend WithEvents MovimientossistemaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Movimientos_sistemaTableAdapter As proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter
     Friend WithEvents movimientos_sistemaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents EntradasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SalidasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EmpleadosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

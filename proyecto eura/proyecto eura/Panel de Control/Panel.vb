@@ -48,7 +48,11 @@
     End Sub
 
     Private Sub MovimientosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovimientosToolStripMenuItem.Click
-        reporteMovimentosSistema.Show()
+        reporteEntradasAlmacen.Show()
 
+    End Sub
+
+    Private Sub EntradasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EntradasToolStripMenuItem.Click
+        reporteEntradas.Show()
     End Sub
 End Class

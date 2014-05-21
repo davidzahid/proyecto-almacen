@@ -135,6 +135,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Panel de Control\Vistas\Reportes\reporteEntradas.Designer.vb">
+      <DependentUpon>reporteEntradas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Reportes\reporteEntradas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Panel de Control\Vistas\Reportes\movimientosSistema.Designer.vb">
       <DependentUpon>movimientosSistema.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,7 @@
       <DependentUpon>accesoadmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Reportes\movimientos_sistema.rdlc" />
+    <EmbeddedResource Include="Panel de Control\Reportes\reporte_entradas.rdlc" />
     <EmbeddedResource Include="Panel de Control\Vistas\Entrada\nuevaEntrada.resx">
       <DependentUpon>nuevaEntrada.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Reportes\movimientosSistema.resx">
       <DependentUpon>movimientosSistema.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel de Control\Vistas\Reportes\reporteEntradas.resx">
+      <DependentUpon>reporteEntradas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
