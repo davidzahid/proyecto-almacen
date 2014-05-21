@@ -165,6 +165,11 @@
     <Compile Include="Panel de Control\Vistas\Salida\nuevaSalida.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="salidas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>salidas.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Acceso.resx">
@@ -236,6 +241,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="salidas.xsc">
+      <DependentUpon>salidas.xsd</DependentUpon>
+    </None>
+    <None Include="salidas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>salidas.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="salidas.xss">
+      <DependentUpon>salidas.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Panel de Control\Vistas\Ayuda\" />

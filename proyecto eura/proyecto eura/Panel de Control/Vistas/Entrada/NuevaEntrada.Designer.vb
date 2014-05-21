@@ -453,7 +453,7 @@ Partial Class frmNuevaEntrada
         Me.cbxProveedor.FormattingEnabled = True
         Me.cbxProveedor.Location = New System.Drawing.Point(114, 98)
         Me.cbxProveedor.Name = "cbxProveedor"
-        Me.cbxProveedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.cbxProveedor.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cbxProveedor.Size = New System.Drawing.Size(216, 21)
         Me.cbxProveedor.TabIndex = 15
         Me.cbxProveedor.ValueMember = "nombre_proveedor"
@@ -498,7 +498,7 @@ Partial Class frmNuevaEntrada
         Me.cbxUnidad.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Metro", "Metro Cuadrado", "Metro Cubico", "Centimetro", "Centimetro Cuadrado", "Mililitros", "Litro"})
         Me.cbxUnidad.Location = New System.Drawing.Point(114, 179)
         Me.cbxUnidad.Name = "cbxUnidad"
-        Me.cbxUnidad.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.cbxUnidad.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cbxUnidad.Size = New System.Drawing.Size(216, 21)
         Me.cbxUnidad.TabIndex = 18
         '

@@ -43,16 +43,16 @@ Partial Class Panel
         Me.EliminarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EntradasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Movimientos = New proyecto_eura.movimientos()
         Me.MovimientossistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Movimientos_sistemaTableAdapter = New proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter()
         Me.movimientos_sistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EntradasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,19 +88,19 @@ Partial Class Panel
         'AdministradorToolStripMenuItem
         '
         Me.AdministradorToolStripMenuItem.Name = "AdministradorToolStripMenuItem"
-        Me.AdministradorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AdministradorToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.AdministradorToolStripMenuItem.Text = "Administrador"
         '
         'CerrarSesionToolStripMenuItem
         '
         Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
-        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesión"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'EntradaToolStripMenuItem
@@ -126,7 +126,7 @@ Partial Class Panel
         'NuevaToolStripMenuItem1
         '
         Me.NuevaToolStripMenuItem1.Name = "NuevaToolStripMenuItem1"
-        Me.NuevaToolStripMenuItem1.Size = New System.Drawing.Size(108, 22)
+        Me.NuevaToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.NuevaToolStripMenuItem1.Text = "Nueva"
         '
         'EmpleadosToolStripMenuItem
@@ -189,8 +189,32 @@ Partial Class Panel
         'MovimientosToolStripMenuItem
         '
         Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
-        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.MovimientosToolStripMenuItem.Text = "Movimientos"
+        '
+        'EntradasToolStripMenuItem
+        '
+        Me.EntradasToolStripMenuItem.Name = "EntradasToolStripMenuItem"
+        Me.EntradasToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.EntradasToolStripMenuItem.Text = "Entradas"
+        '
+        'SalidasToolStripMenuItem
+        '
+        Me.SalidasToolStripMenuItem.Name = "SalidasToolStripMenuItem"
+        Me.SalidasToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.SalidasToolStripMenuItem.Text = "Salidas"
+        '
+        'ProveedoresToolStripMenuItem1
+        '
+        Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
+        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(144, 22)
+        Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
+        '
+        'EmpleadosToolStripMenuItem1
+        '
+        Me.EmpleadosToolStripMenuItem1.Name = "EmpleadosToolStripMenuItem1"
+        Me.EmpleadosToolStripMenuItem1.Size = New System.Drawing.Size(144, 22)
+        Me.EmpleadosToolStripMenuItem1.Text = "Empleados"
         '
         'AyudaToolStripMenuItem
         '
@@ -223,30 +247,6 @@ Partial Class Panel
         '
         Me.movimientos_sistemaBindingSource.DataMember = "movimientos_sistema"
         Me.movimientos_sistemaBindingSource.DataSource = Me.Movimientos
-        '
-        'EntradasToolStripMenuItem
-        '
-        Me.EntradasToolStripMenuItem.Name = "EntradasToolStripMenuItem"
-        Me.EntradasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EntradasToolStripMenuItem.Text = "Entradas"
-        '
-        'SalidasToolStripMenuItem
-        '
-        Me.SalidasToolStripMenuItem.Name = "SalidasToolStripMenuItem"
-        Me.SalidasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SalidasToolStripMenuItem.Text = "Salidas"
-        '
-        'ProveedoresToolStripMenuItem1
-        '
-        Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
-        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
-        '
-        'EmpleadosToolStripMenuItem1
-        '
-        Me.EmpleadosToolStripMenuItem1.Name = "EmpleadosToolStripMenuItem1"
-        Me.EmpleadosToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.EmpleadosToolStripMenuItem1.Text = "Empleados"
         '
         'Panel
         '
