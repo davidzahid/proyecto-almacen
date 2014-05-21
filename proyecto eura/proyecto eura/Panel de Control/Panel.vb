@@ -14,7 +14,7 @@
 
     End Sub
 
-    Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
+    Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesionToolStripMenuItem.Click
         value.Text = 2
         asignar(value.Text)
         'Limpiamos valores'

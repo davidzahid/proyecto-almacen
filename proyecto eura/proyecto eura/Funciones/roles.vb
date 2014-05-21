@@ -8,8 +8,8 @@
             'HABILITAR CERRAR SESION ADMIN'
             Panel.AdministradorToolStripMenuItem.Enabled = False
             Panel.AdministradorToolStripMenuItem.Visible = False
-            Panel.CerrarSesiónToolStripMenuItem.Enabled = True
-            Panel.CerrarSesiónToolStripMenuItem.Visible = True
+            Panel.CerrarSesionToolStripMenuItem.Enabled = True
+            Panel.CerrarSesionToolStripMenuItem.Visible = True
 
             'ELEMENTOS DEL MENU HABILITADOS
 
@@ -24,10 +24,10 @@
             'EMPLEADOS     
         ElseIf (value = 2) Then
 
-       
+
             'HABILITAR CERRAR SESION ADMIN'
-            Panel.CerrarSesiónToolStripMenuItem.Enabled = False
-            Panel.CerrarSesiónToolStripMenuItem.Visible = False
+            Panel.CerrarSesionToolStripMenuItem.Enabled = False
+            Panel.CerrarSesionToolStripMenuItem.Visible = False
             '
             'ELEMENTOS DEL MENU DESHABILITADOS
 
