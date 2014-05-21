@@ -472,8 +472,9 @@ Partial Class frmNuevaEntrada
         '
         'txtPrecio
         '
+        Me.txtPrecio.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.txtPrecio.Location = New System.Drawing.Point(114, 125)
-        Me.txtPrecio.MaxLength = 10
+        Me.txtPrecio.MaxLength = 8
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(216, 20)
         Me.txtPrecio.TabIndex = 16

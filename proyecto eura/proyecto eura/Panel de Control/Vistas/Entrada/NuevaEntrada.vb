@@ -62,10 +62,45 @@
 
     End Sub
 
+
     Private Sub cbxUnidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxUnidad.SelectedIndexChanged
         'RECIBE SELECCION DE COMBOBOX TIPOUNIDAD
         lblUnidad.Text = cbxUnidad.SelectedItem
     End Sub
+    'VALIDADORES DE TEXTO
+    Private Sub cbxProveedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbxProveedor.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub cbxUnidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbxUnidad.KeyPress
+        e.Handled = True
+    End Sub
+    Private Sub txtPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio.KeyPress
+        Dim resultado As TextBox = DirectCast(sender, TextBox)
+        If Not (Char.IsDigit(e.KeyChar) Or Char.IsControl(e.KeyChar) Or (e.KeyChar = "." And txtPrecio.Text.IndexOf(".") < 0) Or (e.KeyChar = "-" And txtPrecio.Text.Length = 0)) Then
+            e.Handled = True
+
+        End If
+        Dim validador As Integer
+        validador = txtPrecio.TextLength
+
+        If (validador = 8) Then
+            txtPrecio.Text = txtPrecio.Text + ".0"
+        ElseIf (txtPrecio.Text.IndexOf(".")) Then
+
+        End If
+
+
+    End Sub
+
+    Private Sub txtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCantidad.KeyPress
+        Dim resultado As TextBox = DirectCast(sender, TextBox)
+        If Not (Char.IsDigit(e.KeyChar) Or Char.IsControl(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+
 
     Private Sub cbxProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxProveedor.SelectedIndexChanged
         'RECIBE SELECCION DE COMBO BOX PROVEEDOR
@@ -97,4 +132,7 @@
 
         End If
     End Sub
+
+
+
 End Class
