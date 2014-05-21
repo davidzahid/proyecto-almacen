@@ -92,6 +92,11 @@
     <Compile Include="entradas.vb">
       <DependentUpon>entradas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="entradas1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>entradas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Funciones\roles.vb" />
     <Compile Include="Funciones\usuarios.vb" />
     <Compile Include="movimientos.Designer.vb">
@@ -106,6 +111,12 @@
       <DependentUpon>accesoadmin.vb</DependentUpon>
     </Compile>
     <Compile Include="Panel de Control\accesoadmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.Designer.vb">
+      <DependentUpon>nuevoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Panel de Control\Vistas\Entrada\nuevaEntrada.Designer.vb">
@@ -147,6 +158,11 @@
     <Compile Include="Panel de Control\Vistas\Reportes\movimientosSistema.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="puesto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>puesto.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Acceso.resx">
@@ -157,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Reportes\movimientos_sistema.rdlc" />
     <EmbeddedResource Include="Panel de Control\Reportes\reporte_entradas.rdlc" />
+    <EmbeddedResource Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.resx">
+      <DependentUpon>nuevoEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Entrada\nuevaEntrada.resx">
       <DependentUpon>nuevaEntrada.vb</DependentUpon>
     </EmbeddedResource>
@@ -182,8 +201,8 @@
     </None>
     <None Include="entradas.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>entradas.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>entradas1.Designer.vb</LastGenOutput>
     </None>
     <None Include="entradas.xss">
       <DependentUpon>entradas.xsd</DependentUpon>
@@ -209,10 +228,20 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="puesto.xsc">
+      <DependentUpon>puesto.xsd</DependentUpon>
+    </None>
+    <None Include="puesto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>puesto.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="puesto.xss">
+      <DependentUpon>puesto.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Panel de Control\Vistas\Ayuda\" />
-    <Folder Include="Panel de Control\Vistas\Empleados\" />
     <Folder Include="Panel de Control\Vistas\Proveedores\" />
     <Folder Include="Panel de Control\Vistas\Salida\" />
   </ItemGroup>

@@ -46,7 +46,7 @@ Module usuarios
         Dim sw As Boolean = False
         Try
             oconexion.ConnectionString = "server=localhost;database=eura_database;user id=root;password=david"
-            sSql = "SELECT * FROM empleado WHERE username = '" & usuario & "' and password = '" & password & "'"
+            sSql = "SELECT * FROM empleado WHERE username = '" & usuario & "' and password = '" & password & "' and status = 'Habilitado'"
             odataadapter = New MySqlDataAdapter(sSql, oconexion)
             oconexion.Open()
             odataset.Clear()
