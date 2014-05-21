@@ -1,6 +1,6 @@
 ﻿Public Class nuevaSalida
 
-    Private Sub EntradaBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles EntradaBindingNavigatorSaveItem.Click
+    Private Sub EntradaBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.EntradaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Salidas)
@@ -24,9 +24,11 @@
         'generar fecha y hora actual del sistema
         Dim timestamp As Date = Format(Now)
         txtFecha.Text = timestamp.ToString(("dd/MM/yyyy HH:mm tt"))
-        txtNoNota.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(0).Value()
-        txtUnidad.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(3).Value()
-
+        txtNoNotaId.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(0).Value()
+        txtNoNota.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(1).Value()
+        txtCantidad.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(3).Value()
+        txtUnidad.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(4).Value()
+        txtNoSalidas.Enabled = True
         'GENERA ID'
         txtId.Text = Val(Me.SalidaTableAdapter.identificador())
 
@@ -35,15 +37,49 @@
         End If
         txtId.Text = txtId.Text + 1
 
-
-
-
+        'cantidad'
 
     End Sub
 
 
+    Private Sub txtNoSalidas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNoSalidas.KeyPress
+        Dim resultado As TextBox = DirectCast(sender, TextBox)
+        If Not (Char.IsDigit(e.KeyChar) Or Char.IsControl(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
 
    
+    Private Sub cbxObra_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbxObra.KeyPress
+        e.Handled = True
+    End Sub
+
     
 
+  
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
+        'VALIDAR '
+        Try
+            If (txtCantidad.Text < txtNoSalidas.Text) Then
+                MessageBox.Show("Cantidad Disponible:" + txtCantidad.Text)
+                txtNoSalidas.Text = ""
+            ElseIf (txtNoSalidas.Text = "") Then
+                MessageBox.Show("Inserte un Número de salidas")
+            ElseIf (txtNoSalidas.Text = 0) Then
+                MessageBox.Show("Intento fallido")
+                txtNoSalidas.Text = ""
+            Else
+
+                txtCantidad.Text = txtCantidad.Text - txtNoSalidas.Text
+                MessageBox.Show("Operación realizada con exito")
+
+
+
+            End If
+        Catch ex As Exception
+
+        End Try
+  
+    End Sub
 End Class

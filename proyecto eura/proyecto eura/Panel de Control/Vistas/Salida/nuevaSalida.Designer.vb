@@ -23,7 +23,6 @@ Partial Class nuevaSalida
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(nuevaSalida))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -43,20 +42,8 @@ Partial Class nuevaSalida
         Me.EntradaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EntradaTableAdapter = New proyecto_eura.salidasTableAdapters.entradaTableAdapter()
         Me.TableAdapterManager = New proyecto_eura.salidasTableAdapters.TableAdapterManager()
-        Me.EntradaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.EntradaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.EntradaDataGridView = New System.Windows.Forms.DataGridView()
+        Me.id_entrada = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -80,11 +67,10 @@ Partial Class nuevaSalida
         Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.txtNoNotaId = New System.Windows.Forms.TextBox()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
         CType(Me.Obra_destinoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Salidas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EntradaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.EntradaBindingNavigator.SuspendLayout()
         CType(Me.EntradaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Obra_destinoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -222,6 +208,7 @@ Partial Class nuevaSalida
         '
         'txtNoSalidas
         '
+        Me.txtNoSalidas.Enabled = False
         Me.txtNoSalidas.Location = New System.Drawing.Point(213, 311)
         Me.txtNoSalidas.Name = "txtNoSalidas"
         Me.txtNoSalidas.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -255,129 +242,26 @@ Partial Class nuevaSalida
         Me.TableAdapterManager.salidaTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = proyecto_eura.salidasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'EntradaBindingNavigator
-        '
-        Me.EntradaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.EntradaBindingNavigator.BindingSource = Me.EntradaBindingSource
-        Me.EntradaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.EntradaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.EntradaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.EntradaBindingNavigatorSaveItem})
-        Me.EntradaBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.EntradaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.EntradaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.EntradaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.EntradaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.EntradaBindingNavigator.Name = "EntradaBindingNavigator"
-        Me.EntradaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.EntradaBindingNavigator.Size = New System.Drawing.Size(862, 25)
-        Me.EntradaBindingNavigator.TabIndex = 4
-        Me.EntradaBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Mover último"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'EntradaBindingNavigatorSaveItem
-        '
-        Me.EntradaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.EntradaBindingNavigatorSaveItem.Image = CType(resources.GetObject("EntradaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.EntradaBindingNavigatorSaveItem.Name = "EntradaBindingNavigatorSaveItem"
-        Me.EntradaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.EntradaBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
         'EntradaDataGridView
         '
         Me.EntradaDataGridView.AllowUserToDeleteRows = False
         Me.EntradaDataGridView.AutoGenerateColumns = False
         Me.EntradaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.EntradaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.EntradaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_entrada, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.EntradaDataGridView.DataSource = Me.EntradaBindingSource
         Me.EntradaDataGridView.Location = New System.Drawing.Point(341, 72)
         Me.EntradaDataGridView.Name = "EntradaDataGridView"
         Me.EntradaDataGridView.ReadOnly = True
         Me.EntradaDataGridView.Size = New System.Drawing.Size(436, 291)
         Me.EntradaDataGridView.TabIndex = 15
+        '
+        'id_entrada
+        '
+        Me.id_entrada.DataPropertyName = "id_entrada"
+        Me.id_entrada.HeaderText = "id_entrada"
+        Me.id_entrada.Name = "id_entrada"
+        Me.id_entrada.ReadOnly = True
+        Me.id_entrada.Visible = False
         '
         'DataGridViewTextBoxColumn2
         '
@@ -538,6 +422,13 @@ Partial Class nuevaSalida
         Me.txtNoNotaId.Size = New System.Drawing.Size(100, 20)
         Me.txtNoNotaId.TabIndex = 20
         '
+        'txtCantidad
+        '
+        Me.txtCantidad.Location = New System.Drawing.Point(480, 386)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(100, 20)
+        Me.txtCantidad.TabIndex = 21
+        '
         'nuevaSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -545,12 +436,12 @@ Partial Class nuevaSalida
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(862, 733)
+        Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.txtNoNotaId)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.SalidaDataGridView)
         Me.Controls.Add(Me.Obra_destinoDataGridView)
         Me.Controls.Add(Me.EntradaDataGridView)
-        Me.Controls.Add(Me.EntradaBindingNavigator)
         Me.Controls.Add(Me.txtNoNota)
         Me.Controls.Add(Me.txtNoSalidas)
         Me.Controls.Add(Me.txtNota)
@@ -573,9 +464,6 @@ Partial Class nuevaSalida
         CType(Me.Obra_destinoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Salidas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EntradaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.EntradaBindingNavigator.ResumeLayout(False)
-        Me.EntradaBindingNavigator.PerformLayout()
         CType(Me.EntradaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Obra_destinoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -602,19 +490,6 @@ Partial Class nuevaSalida
     Friend WithEvents EntradaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents EntradaTableAdapter As proyecto_eura.salidasTableAdapters.entradaTableAdapter
     Friend WithEvents TableAdapterManager As proyecto_eura.salidasTableAdapters.TableAdapterManager
-    Friend WithEvents EntradaBindingNavigator As System.Windows.Forms.BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents EntradaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents EntradaDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents lblSelect As System.Windows.Forms.Label
     Friend WithEvents Obra_destinoBindingSource As System.Windows.Forms.BindingSource
@@ -635,9 +510,11 @@ Partial Class nuevaSalida
     Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents txtNoNotaId As System.Windows.Forms.TextBox
+    Friend WithEvents id_entrada As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents txtNoNotaId As System.Windows.Forms.TextBox
+    Friend WithEvents txtCantidad As System.Windows.Forms.TextBox
 End Class
