@@ -22,11 +22,8 @@ Partial Class Panel
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Panel))
-        Me.Administrador = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
         Me.value = New System.Windows.Forms.Label()
-        Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdministradorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,18 +45,15 @@ Partial Class Panel
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Movimientos = New proyecto_eura.movimientos()
+        Me.MovimientossistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Movimientos_sistemaTableAdapter = New proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter()
+        Me.movimientos_sistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.movimientos_sistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Administrador
-        '
-        Me.Administrador.Location = New System.Drawing.Point(263, 113)
-        Me.Administrador.Name = "Administrador"
-        Me.Administrador.Size = New System.Drawing.Size(90, 23)
-        Me.Administrador.TabIndex = 1
-        Me.Administrador.Text = "Administrador"
-        Me.Administrador.UseVisualStyleBackColor = True
         '
         'value
         '
@@ -70,27 +64,6 @@ Partial Class Panel
         Me.value.Size = New System.Drawing.Size(0, 13)
         Me.value.TabIndex = 6
         Me.value.Visible = False
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Enabled = False
-        Me.btnCerrar.Location = New System.Drawing.Point(359, 112)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(91, 23)
-        Me.btnCerrar.TabIndex = 7
-        Me.btnCerrar.Text = "Cerrar Sesión"
-        Me.btnCerrar.UseVisualStyleBackColor = True
-        Me.btnCerrar.Visible = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(598, 275)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(203, 193)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
         '
         'MenuStrip1
         '
@@ -212,7 +185,7 @@ Partial Class Panel
         'MovimientosToolStripMenuItem
         '
         Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
-        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MovimientosToolStripMenuItem.Text = "Movimientos"
         '
         'AyudaToolStripMenuItem
@@ -228,33 +201,48 @@ Partial Class Panel
         Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
         '
+        'Movimientos
+        '
+        Me.Movimientos.DataSetName = "movimientos"
+        Me.Movimientos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MovimientossistemaBindingSource
+        '
+        Me.MovimientossistemaBindingSource.DataMember = "movimientos_sistema"
+        Me.MovimientossistemaBindingSource.DataSource = Me.Movimientos
+        '
+        'Movimientos_sistemaTableAdapter
+        '
+        Me.Movimientos_sistemaTableAdapter.ClearBeforeFill = True
+        '
+        'movimientos_sistemaBindingSource
+        '
+        Me.movimientos_sistemaBindingSource.DataMember = "movimientos_sistema"
+        Me.movimientos_sistemaBindingSource.DataSource = Me.Movimientos
+        '
         'Panel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(841, 480)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.value)
-        Me.Controls.Add(Me.Administrador)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Panel"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Panel"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.movimientos_sistemaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Administrador As System.Windows.Forms.Button
     Friend WithEvents value As System.Windows.Forms.Label
-    Friend WithEvents btnCerrar As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents InicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AdministradorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -276,4 +264,8 @@ Partial Class Panel
     Friend WithEvents EliminarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MovimientosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Movimientos As proyecto_eura.movimientos
+    Friend WithEvents MovimientossistemaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Movimientos_sistemaTableAdapter As proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter
+    Friend WithEvents movimientos_sistemaBindingSource As System.Windows.Forms.BindingSource
 End Class

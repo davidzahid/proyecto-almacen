@@ -56,9 +56,6 @@
             Panel.Show()
             Me.Visible = False
 
-
-
-
         Else
 
             contador = contador + 1
