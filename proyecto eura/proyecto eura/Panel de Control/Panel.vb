@@ -55,8 +55,4 @@
     Private Sub EntradasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EntradasToolStripMenuItem.Click
         reporteEntradas.Show()
     End Sub
-
-    Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
-        nuevoEmpleado.Show()
-    End Sub
 End Class
