@@ -70,13 +70,14 @@
                 MessageBox.Show("Intento fallido")
                 txtNoSalidas.Text = ""
             Else
-
                 txtCantidad.Text = txtCantidad.Text - txtNoSalidas.Text
-                MessageBox.Show("Operación realizada con exito")
-
-
-
             End If
+
+            If (cbxObra.SelectedValue = "") Then
+                MessageBox.Show("Selecciona una obra de salida")
+            End If
+
+
         Catch ex As Exception
 
         End Try
