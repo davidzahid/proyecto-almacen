@@ -108,6 +108,18 @@
     <Compile Include="Panel de Control\accesoadmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.Designer.vb">
+      <DependentUpon>nuevoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Proveedores\nuevoProveedor.Designer.vb">
+      <DependentUpon>nuevoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Proveedores\nuevoProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Panel de Control\Vistas\Entrada\nuevaEntrada.Designer.vb">
       <DependentUpon>nuevaEntrada.vb</DependentUpon>
     </Compile>
@@ -147,6 +159,12 @@
     <Compile Include="Panel de Control\Vistas\Reportes\movimientosSistema.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Panel de Control\Vistas\Salida\nuevaSalida.Designer.vb">
+      <DependentUpon>nuevaSalida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Salida\nuevaSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Acceso.resx">
@@ -157,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Reportes\movimientos_sistema.rdlc" />
     <EmbeddedResource Include="Panel de Control\Reportes\reporte_entradas.rdlc" />
+    <EmbeddedResource Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.resx">
+      <DependentUpon>nuevoEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Entrada\nuevaEntrada.resx">
       <DependentUpon>nuevaEntrada.vb</DependentUpon>
     </EmbeddedResource>
@@ -169,11 +190,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel de Control\Vistas\Proveedores\nuevoProveedor.resx">
+      <DependentUpon>nuevoProveedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Reportes\movimientosSistema.resx">
       <DependentUpon>movimientosSistema.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Reportes\reporteEntradas.resx">
       <DependentUpon>reporteEntradas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel de Control\Vistas\Salida\nuevaSalida.resx">
+      <DependentUpon>nuevaSalida.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -212,9 +239,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Panel de Control\Vistas\Ayuda\" />
-    <Folder Include="Panel de Control\Vistas\Empleados\" />
-    <Folder Include="Panel de Control\Vistas\Proveedores\" />
-    <Folder Include="Panel de Control\Vistas\Salida\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

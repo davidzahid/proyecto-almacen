@@ -347,6 +347,7 @@ Partial Class frmNuevaEntrada
         Me.txtNoNota.Location = New System.Drawing.Point(230, 46)
         Me.txtNoNota.MaxLength = 10
         Me.txtNoNota.Name = "txtNoNota"
+        Me.txtNoNota.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtNoNota.Size = New System.Drawing.Size(100, 20)
         Me.txtNoNota.TabIndex = 4
         '
@@ -440,6 +441,7 @@ Partial Class frmNuevaEntrada
         Me.txtDescripcion.Location = New System.Drawing.Point(114, 73)
         Me.txtDescripcion.MaxLength = 60
         Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtDescripcion.Size = New System.Drawing.Size(216, 20)
         Me.txtDescripcion.TabIndex = 14
         '
@@ -451,6 +453,7 @@ Partial Class frmNuevaEntrada
         Me.cbxProveedor.FormattingEnabled = True
         Me.cbxProveedor.Location = New System.Drawing.Point(114, 98)
         Me.cbxProveedor.Name = "cbxProveedor"
+        Me.cbxProveedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.cbxProveedor.Size = New System.Drawing.Size(216, 21)
         Me.cbxProveedor.TabIndex = 15
         Me.cbxProveedor.ValueMember = "nombre_proveedor"
@@ -476,6 +479,7 @@ Partial Class frmNuevaEntrada
         Me.txtPrecio.Location = New System.Drawing.Point(114, 125)
         Me.txtPrecio.MaxLength = 8
         Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtPrecio.Size = New System.Drawing.Size(216, 20)
         Me.txtPrecio.TabIndex = 16
         '
@@ -484,6 +488,7 @@ Partial Class frmNuevaEntrada
         Me.txtCantidad.Location = New System.Drawing.Point(114, 152)
         Me.txtCantidad.MaxLength = 10
         Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtCantidad.Size = New System.Drawing.Size(216, 20)
         Me.txtCantidad.TabIndex = 17
         '
@@ -493,6 +498,7 @@ Partial Class frmNuevaEntrada
         Me.cbxUnidad.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Metro", "Metro Cuadrado", "Metro Cubico", "Centimetro", "Centimetro Cuadrado", "Mililitros", "Litro"})
         Me.cbxUnidad.Location = New System.Drawing.Point(114, 179)
         Me.cbxUnidad.Name = "cbxUnidad"
+        Me.cbxUnidad.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.cbxUnidad.Size = New System.Drawing.Size(216, 21)
         Me.cbxUnidad.TabIndex = 18
         '
@@ -502,6 +508,7 @@ Partial Class frmNuevaEntrada
         Me.txtNota.MaxLength = 255
         Me.txtNota.Multiline = True
         Me.txtNota.Name = "txtNota"
+        Me.txtNota.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtNota.Size = New System.Drawing.Size(216, 96)
         Me.txtNota.TabIndex = 19
         '
@@ -738,7 +745,7 @@ Partial Class frmNuevaEntrada
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(346, 397)
+        Me.ClientSize = New System.Drawing.Size(362, 397)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.lblUnidad)
         Me.Controls.Add(Me.lblPuesto)
