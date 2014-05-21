@@ -81,7 +81,10 @@
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Me.Close()
+ 
+            Me.Close()
+       
+
 
     End Sub
 
@@ -92,6 +95,7 @@
         Me.Movimientos_sistemaTableAdapter.Fill(Me.Movimientos.movimientos_sistema)
         'TODO: esta línea de código carga datos en la tabla 'Movimientos.empleado' Puede moverla o quitarla según sea necesario.
         Me.EmpleadoTableAdapter.Fill(Me.Movimientos.empleado)
+
 
 
 

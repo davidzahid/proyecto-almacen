@@ -33,20 +33,20 @@ Partial Class Panel
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntradaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -111,19 +111,19 @@ Partial Class Panel
         'AdministradorToolStripMenuItem
         '
         Me.AdministradorToolStripMenuItem.Name = "AdministradorToolStripMenuItem"
-        Me.AdministradorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AdministradorToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.AdministradorToolStripMenuItem.Text = "Administrador"
         '
         'CerrarSesiónToolStripMenuItem
         '
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'EntradaToolStripMenuItem
@@ -133,12 +133,24 @@ Partial Class Panel
         Me.EntradaToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.EntradaToolStripMenuItem.Text = "Entrada"
         '
+        'NuevaToolStripMenuItem
+        '
+        Me.NuevaToolStripMenuItem.Name = "NuevaToolStripMenuItem"
+        Me.NuevaToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
+        Me.NuevaToolStripMenuItem.Text = "Nueva"
+        '
         'SalidaToolStripMenuItem
         '
         Me.SalidaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaToolStripMenuItem1})
         Me.SalidaToolStripMenuItem.Name = "SalidaToolStripMenuItem"
         Me.SalidaToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.SalidaToolStripMenuItem.Text = "Salida"
+        '
+        'NuevaToolStripMenuItem1
+        '
+        Me.NuevaToolStripMenuItem1.Name = "NuevaToolStripMenuItem1"
+        Me.NuevaToolStripMenuItem1.Size = New System.Drawing.Size(108, 22)
+        Me.NuevaToolStripMenuItem1.Text = "Nueva"
         '
         'EmpleadosToolStripMenuItem
         '
@@ -147,12 +159,48 @@ Partial Class Panel
         Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
+        'NuevoToolStripMenuItem
+        '
+        Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
+        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.NuevoToolStripMenuItem.Text = "Nuevo"
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem1, Me.EditarToolStripMenuItem1, Me.EliminarToolStripMenuItem1})
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
+        '
+        'NuevoToolStripMenuItem1
+        '
+        Me.NuevoToolStripMenuItem1.Name = "NuevoToolStripMenuItem1"
+        Me.NuevoToolStripMenuItem1.Size = New System.Drawing.Size(117, 22)
+        Me.NuevoToolStripMenuItem1.Text = "Nuevo"
+        '
+        'EditarToolStripMenuItem1
+        '
+        Me.EditarToolStripMenuItem1.Name = "EditarToolStripMenuItem1"
+        Me.EditarToolStripMenuItem1.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem1.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem1
+        '
+        Me.EliminarToolStripMenuItem1.Name = "EliminarToolStripMenuItem1"
+        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem1.Text = "Eliminar"
         '
         'ReportesToolStripMenuItem
         '
@@ -161,6 +209,12 @@ Partial Class Panel
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
+        'MovimientosToolStripMenuItem
+        '
+        Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
+        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.MovimientosToolStripMenuItem.Text = "Movimientos"
+        '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeToolStripMenuItem})
@@ -168,64 +222,10 @@ Partial Class Panel
         Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
-        'NuevaToolStripMenuItem
-        '
-        Me.NuevaToolStripMenuItem.Name = "NuevaToolStripMenuItem"
-        Me.NuevaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NuevaToolStripMenuItem.Text = "Nueva"
-        '
-        'NuevaToolStripMenuItem1
-        '
-        Me.NuevaToolStripMenuItem1.Name = "NuevaToolStripMenuItem1"
-        Me.NuevaToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.NuevaToolStripMenuItem1.Text = "Nueva"
-        '
-        'NuevoToolStripMenuItem
-        '
-        Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
-        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NuevoToolStripMenuItem.Text = "Nuevo"
-        '
-        'EditarToolStripMenuItem
-        '
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EditarToolStripMenuItem.Text = "Editar"
-        '
-        'EliminarToolStripMenuItem
-        '
-        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EliminarToolStripMenuItem.Text = "Eliminar"
-        '
-        'NuevoToolStripMenuItem1
-        '
-        Me.NuevoToolStripMenuItem1.Name = "NuevoToolStripMenuItem1"
-        Me.NuevoToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.NuevoToolStripMenuItem1.Text = "Nuevo"
-        '
-        'EditarToolStripMenuItem1
-        '
-        Me.EditarToolStripMenuItem1.Name = "EditarToolStripMenuItem1"
-        Me.EditarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.EditarToolStripMenuItem1.Text = "Editar"
-        '
-        'EliminarToolStripMenuItem1
-        '
-        Me.EliminarToolStripMenuItem1.Name = "EliminarToolStripMenuItem1"
-        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.EliminarToolStripMenuItem1.Text = "Eliminar"
-        '
-        'MovimientosToolStripMenuItem
-        '
-        Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
-        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.MovimientosToolStripMenuItem.Text = "Movimientos"
-        '
         'AcercaDeToolStripMenuItem
         '
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
         '
         'Panel

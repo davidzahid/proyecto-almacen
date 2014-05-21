@@ -81,6 +81,14 @@
       <DependentUpon>Acceso.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="entradas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>entradas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entradas.vb">
+      <DependentUpon>entradas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Funciones\roles.vb" />
     <Compile Include="Funciones\usuarios.vb" />
     <Compile Include="movimientos.Designer.vb">
@@ -91,16 +99,22 @@
     <Compile Include="movimientos.vb">
       <DependentUpon>movimientos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Secciones\accesoadmin.Designer.vb">
+    <Compile Include="Panel de Control\accesoadmin.Designer.vb">
       <DependentUpon>accesoadmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Secciones\accesoadmin.vb">
+    <Compile Include="Panel de Control\accesoadmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Secciones\Panel.Designer.vb">
+    <Compile Include="Panel de Control\Modulos\Entrada\nuevaEntrada.Designer.vb">
+      <DependentUpon>nuevaEntrada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Modulos\Entrada\nuevaEntrada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel de Control\Panel.Designer.vb">
       <DependentUpon>Panel.vb</DependentUpon>
     </Compile>
-    <Compile Include="Secciones\Panel.vb">
+    <Compile Include="Panel de Control\Panel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -123,10 +137,13 @@
     <EmbeddedResource Include="Acceso.resx">
       <DependentUpon>Acceso.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Secciones\accesoadmin.resx">
+    <EmbeddedResource Include="Panel de Control\accesoadmin.resx">
       <DependentUpon>accesoadmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Secciones\Panel.resx">
+    <EmbeddedResource Include="Panel de Control\Modulos\Entrada\nuevaEntrada.resx">
+      <DependentUpon>nuevaEntrada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel de Control\Panel.resx">
       <DependentUpon>Panel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -137,6 +154,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="entradas.xsc">
+      <DependentUpon>entradas.xsd</DependentUpon>
+    </None>
+    <None Include="entradas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>entradas.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="entradas.xss">
+      <DependentUpon>entradas.xsd</DependentUpon>
+    </None>
     <None Include="movimientos.xsc">
       <DependentUpon>movimientos.xsd</DependentUpon>
     </None>
@@ -159,7 +187,13 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Panel de Control\Modulos\Ayuda\" />
+    <Folder Include="Panel de Control\Modulos\Empleados\" />
+    <Folder Include="Panel de Control\Modulos\Proveedores\" />
+    <Folder Include="Panel de Control\Modulos\Reportes\" />
+    <Folder Include="Panel de Control\Modulos\Salida\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

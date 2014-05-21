@@ -30,7 +30,6 @@ Partial Class Acceso
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.value = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.lblFecha = New System.Windows.Forms.Label()
@@ -60,6 +59,7 @@ Partial Class Acceso
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtPuesto = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.value = New System.Windows.Forms.Label()
         CType(Me.EmpleadoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +101,7 @@ Partial Class Acceso
         'btnCancelar
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.DodgerBlue
@@ -108,7 +109,7 @@ Partial Class Acceso
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(93, 34)
         Me.btnCancelar.TabIndex = 3
-        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.Text = "Salir"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'Label1
@@ -133,18 +134,9 @@ Partial Class Acceso
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Contraseña"
         '
-        'value
-        '
-        Me.value.AutoSize = True
-        Me.value.Enabled = False
-        Me.value.Location = New System.Drawing.Point(216, 105)
-        Me.value.Name = "value"
-        Me.value.Size = New System.Drawing.Size(0, 13)
-        Me.value.TabIndex = 5
-        Me.value.Visible = False
-        '
         'txtId
         '
+        Me.txtId.Enabled = False
         Me.txtId.Location = New System.Drawing.Point(630, 73)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
@@ -153,6 +145,7 @@ Partial Class Acceso
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
+        Me.lblDescripcion.Enabled = False
         Me.lblDescripcion.Location = New System.Drawing.Point(591, 113)
         Me.lblDescripcion.Name = "lblDescripcion"
         Me.lblDescripcion.Size = New System.Drawing.Size(97, 13)
@@ -162,6 +155,7 @@ Partial Class Acceso
         'lblFecha
         '
         Me.lblFecha.AutoSize = True
+        Me.lblFecha.Enabled = False
         Me.lblFecha.Location = New System.Drawing.Point(593, 131)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(34, 13)
@@ -170,6 +164,7 @@ Partial Class Acceso
         '
         'txtEmpleado
         '
+        Me.txtEmpleado.Enabled = False
         Me.txtEmpleado.Location = New System.Drawing.Point(630, 154)
         Me.txtEmpleado.Name = "txtEmpleado"
         Me.txtEmpleado.Size = New System.Drawing.Size(100, 20)
@@ -181,6 +176,7 @@ Partial Class Acceso
         Me.EmpleadoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.EmpleadoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.EmpleadoDataGridView.DataSource = Me.EmpleadoBindingSource
+        Me.EmpleadoDataGridView.Enabled = False
         Me.EmpleadoDataGridView.Location = New System.Drawing.Point(596, 213)
         Me.EmpleadoDataGridView.Name = "EmpleadoDataGridView"
         Me.EmpleadoDataGridView.Size = New System.Drawing.Size(300, 82)
@@ -238,6 +234,7 @@ Partial Class Acceso
         Me.Movimientos_sistemaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Movimientos_sistemaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
         Me.Movimientos_sistemaDataGridView.DataSource = Me.Movimientos_sistemaBindingSource
+        Me.Movimientos_sistemaDataGridView.Enabled = False
         Me.Movimientos_sistemaDataGridView.Location = New System.Drawing.Point(595, 301)
         Me.Movimientos_sistemaDataGridView.Name = "Movimientos_sistemaDataGridView"
         Me.Movimientos_sistemaDataGridView.Size = New System.Drawing.Size(300, 85)
@@ -281,6 +278,7 @@ Partial Class Acceso
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Enabled = False
         Me.Label3.Location = New System.Drawing.Point(595, 73)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(18, 13)
@@ -290,6 +288,7 @@ Partial Class Acceso
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Enabled = False
         Me.Label4.Location = New System.Drawing.Point(592, 157)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(29, 13)
@@ -299,6 +298,7 @@ Partial Class Acceso
         'lblTipo
         '
         Me.lblTipo.AutoSize = True
+        Me.lblTipo.Enabled = False
         Me.lblTipo.Location = New System.Drawing.Point(593, 100)
         Me.lblTipo.Name = "lblTipo"
         Me.lblTipo.Size = New System.Drawing.Size(33, 13)
@@ -323,6 +323,7 @@ Partial Class Acceso
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Enabled = False
         Me.Label5.Location = New System.Drawing.Point(592, 188)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(40, 13)
@@ -331,6 +332,7 @@ Partial Class Acceso
         '
         'txtPuesto
         '
+        Me.txtPuesto.Enabled = False
         Me.txtPuesto.Location = New System.Drawing.Point(638, 181)
         Me.txtPuesto.Name = "txtPuesto"
         Me.txtPuesto.Size = New System.Drawing.Size(100, 20)
@@ -341,11 +343,21 @@ Partial Class Acceso
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Location = New System.Drawing.Point(-45, -29)
+        Me.PictureBox1.Location = New System.Drawing.Point(-46, -29)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(308, 280)
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
+        '
+        'value
+        '
+        Me.value.AutoSize = True
+        Me.value.Enabled = False
+        Me.value.Location = New System.Drawing.Point(216, 105)
+        Me.value.Name = "value"
+        Me.value.Size = New System.Drawing.Size(0, 13)
+        Me.value.TabIndex = 5
+        Me.value.Visible = False
         '
         'Acceso
         '
@@ -353,9 +365,8 @@ Partial Class Acceso
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.CancelButton = Me.btnCancelar
-        Me.ClientSize = New System.Drawing.Size(412, 189)
+        Me.ClientSize = New System.Drawing.Size(411, 180)
         Me.Controls.Add(Me.txtPuesto)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lblTipo)
@@ -395,7 +406,6 @@ Partial Class Acceso
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents value As System.Windows.Forms.Label
     Friend WithEvents txtId As System.Windows.Forms.TextBox
     Friend WithEvents lblDescripcion As System.Windows.Forms.Label
     Friend WithEvents lblFecha As System.Windows.Forms.Label
@@ -425,5 +435,6 @@ Partial Class Acceso
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtPuesto As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents value As System.Windows.Forms.Label
 
 End Class
