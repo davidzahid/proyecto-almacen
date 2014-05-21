@@ -347,7 +347,7 @@ Partial Class frmNuevaEntrada
         Me.txtNoNota.Location = New System.Drawing.Point(230, 46)
         Me.txtNoNota.MaxLength = 10
         Me.txtNoNota.Name = "txtNoNota"
-        Me.txtNoNota.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtNoNota.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtNoNota.Size = New System.Drawing.Size(100, 20)
         Me.txtNoNota.TabIndex = 4
         '
@@ -441,7 +441,7 @@ Partial Class frmNuevaEntrada
         Me.txtDescripcion.Location = New System.Drawing.Point(114, 73)
         Me.txtDescripcion.MaxLength = 60
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtDescripcion.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtDescripcion.Size = New System.Drawing.Size(216, 20)
         Me.txtDescripcion.TabIndex = 14
         '
@@ -479,7 +479,7 @@ Partial Class frmNuevaEntrada
         Me.txtPrecio.Location = New System.Drawing.Point(114, 125)
         Me.txtPrecio.MaxLength = 8
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtPrecio.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtPrecio.Size = New System.Drawing.Size(216, 20)
         Me.txtPrecio.TabIndex = 16
         '
@@ -488,7 +488,7 @@ Partial Class frmNuevaEntrada
         Me.txtCantidad.Location = New System.Drawing.Point(114, 152)
         Me.txtCantidad.MaxLength = 10
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtCantidad.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtCantidad.Size = New System.Drawing.Size(216, 20)
         Me.txtCantidad.TabIndex = 17
         '
@@ -508,7 +508,7 @@ Partial Class frmNuevaEntrada
         Me.txtNota.MaxLength = 255
         Me.txtNota.Multiline = True
         Me.txtNota.Name = "txtNota"
-        Me.txtNota.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtNota.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtNota.Size = New System.Drawing.Size(216, 96)
         Me.txtNota.TabIndex = 19
         '

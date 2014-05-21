@@ -252,7 +252,17 @@
               <Mapping SourceColumn="num_salidas" DataSetColumn="num_salidas" />
               <Mapping SourceColumn="entrada" DataSetColumn="entrada" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="base_eura (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="identificador" Modifier="Public" Name="identificador" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="identificador">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MAX(id_salida) AS Expr1
+FROM            salida</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -262,7 +272,7 @@
   <xs:element name="salidas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="salidas" msprop:Generator_UserDSName="salidas">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="entrada" msprop:Generator_TableClassName="entradaDataTable" msprop:Generator_TableVarName="tableentrada" msprop:Generator_TablePropName="entrada" msprop:Generator_RowDeletingName="entradaRowDeleting" msprop:Generator_RowChangingName="entradaRowChanging" msprop:Generator_RowEvHandlerName="entradaRowChangeEventHandler" msprop:Generator_RowDeletedName="entradaRowDeleted" msprop:Generator_UserTableName="entrada" msprop:Generator_RowChangedName="entradaRowChanged" msprop:Generator_RowEvArgName="entradaRowChangeEvent" msprop:Generator_RowClassName="entradaRow">
+        <xs:element name="entrada" msprop:Generator_TableClassName="entradaDataTable" msprop:Generator_TableVarName="tableentrada" msprop:Generator_RowChangedName="entradaRowChanged" msprop:Generator_TablePropName="entrada" msprop:Generator_RowDeletingName="entradaRowDeleting" msprop:Generator_RowChangingName="entradaRowChanging" msprop:Generator_RowEvHandlerName="entradaRowChangeEventHandler" msprop:Generator_RowDeletedName="entradaRowDeleted" msprop:Generator_RowClassName="entradaRow" msprop:Generator_UserTableName="entrada" msprop:Generator_RowEvArgName="entradaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_entrada" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_entrada" msprop:Generator_ColumnPropNameInRow="id_entrada" msprop:Generator_ColumnPropNameInTable="id_entradaColumn" msprop:Generator_UserColumnName="id_entrada" type="xs:int" />
@@ -302,7 +312,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="obra_destino" msprop:Generator_TableClassName="obra_destinoDataTable" msprop:Generator_TableVarName="tableobra_destino" msprop:Generator_TablePropName="obra_destino" msprop:Generator_RowDeletingName="obra_destinoRowDeleting" msprop:Generator_RowChangingName="obra_destinoRowChanging" msprop:Generator_RowEvHandlerName="obra_destinoRowChangeEventHandler" msprop:Generator_RowDeletedName="obra_destinoRowDeleted" msprop:Generator_UserTableName="obra_destino" msprop:Generator_RowChangedName="obra_destinoRowChanged" msprop:Generator_RowEvArgName="obra_destinoRowChangeEvent" msprop:Generator_RowClassName="obra_destinoRow">
+        <xs:element name="obra_destino" msprop:Generator_TableClassName="obra_destinoDataTable" msprop:Generator_TableVarName="tableobra_destino" msprop:Generator_RowChangedName="obra_destinoRowChanged" msprop:Generator_TablePropName="obra_destino" msprop:Generator_RowDeletingName="obra_destinoRowDeleting" msprop:Generator_RowChangingName="obra_destinoRowChanging" msprop:Generator_RowEvHandlerName="obra_destinoRowChangeEventHandler" msprop:Generator_RowDeletedName="obra_destinoRowDeleted" msprop:Generator_RowClassName="obra_destinoRow" msprop:Generator_UserTableName="obra_destino" msprop:Generator_RowEvArgName="obra_destinoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_obra" msprop:Generator_ColumnVarNameInTable="columnid_obra" msprop:Generator_ColumnPropNameInRow="id_obra" msprop:Generator_ColumnPropNameInTable="id_obraColumn" msprop:Generator_UserColumnName="id_obra" type="xs:int" />
@@ -330,7 +340,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="salida" msprop:Generator_TableClassName="salidaDataTable" msprop:Generator_TableVarName="tablesalida" msprop:Generator_TablePropName="salida" msprop:Generator_RowDeletingName="salidaRowDeleting" msprop:Generator_RowChangingName="salidaRowChanging" msprop:Generator_RowEvHandlerName="salidaRowChangeEventHandler" msprop:Generator_RowDeletedName="salidaRowDeleted" msprop:Generator_UserTableName="salida" msprop:Generator_RowChangedName="salidaRowChanged" msprop:Generator_RowEvArgName="salidaRowChangeEvent" msprop:Generator_RowClassName="salidaRow">
+        <xs:element name="salida" msprop:Generator_TableClassName="salidaDataTable" msprop:Generator_TableVarName="tablesalida" msprop:Generator_RowChangedName="salidaRowChanged" msprop:Generator_TablePropName="salida" msprop:Generator_RowDeletingName="salidaRowDeleting" msprop:Generator_RowChangingName="salidaRowChanging" msprop:Generator_RowEvHandlerName="salidaRowChangeEventHandler" msprop:Generator_RowDeletedName="salidaRowDeleted" msprop:Generator_RowClassName="salidaRow" msprop:Generator_UserTableName="salida" msprop:Generator_RowEvArgName="salidaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_salida" msprop:Generator_ColumnVarNameInTable="columnid_salida" msprop:Generator_ColumnPropNameInRow="id_salida" msprop:Generator_ColumnPropNameInTable="id_salidaColumn" msprop:Generator_UserColumnName="id_salida" type="xs:int" />
@@ -372,8 +382,8 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_ENTRADA" msdata:parent="entrada" msdata:child="salida" msdata:parentkey="id_entrada" msdata:childkey="entrada" msprop:Generator_UserChildTable="salida" msprop:Generator_ChildPropName="GetsalidaRows" msprop:Generator_UserRelationName="FK_ENTRADA" msprop:Generator_ParentPropName="entradaRow" msprop:Generator_RelationVarName="relationFK_ENTRADA" msprop:Generator_UserParentTable="entrada" />
-      <msdata:Relationship name="FK_OBRA_SAL" msdata:parent="obra_destino" msdata:child="salida" msdata:parentkey="id_obra" msdata:childkey="obra" msprop:Generator_UserChildTable="salida" msprop:Generator_ChildPropName="GetsalidaRows" msprop:Generator_UserRelationName="FK_OBRA_SAL" msprop:Generator_ParentPropName="obra_destinoRow" msprop:Generator_RelationVarName="relationFK_OBRA_SAL" msprop:Generator_UserParentTable="obra_destino" />
+      <msdata:Relationship name="FK_ENTRADA" msdata:parent="entrada" msdata:child="salida" msdata:parentkey="id_entrada" msdata:childkey="entrada" msprop:Generator_UserChildTable="salida" msprop:Generator_ChildPropName="GetsalidaRows" msprop:Generator_UserRelationName="FK_ENTRADA" msprop:Generator_RelationVarName="relationFK_ENTRADA" msprop:Generator_UserParentTable="entrada" msprop:Generator_ParentPropName="entradaRow" />
+      <msdata:Relationship name="FK_OBRA_SAL" msdata:parent="obra_destino" msdata:child="salida" msdata:parentkey="id_obra" msdata:childkey="obra" msprop:Generator_UserChildTable="salida" msprop:Generator_ChildPropName="GetsalidaRows" msprop:Generator_UserRelationName="FK_OBRA_SAL" msprop:Generator_RelationVarName="relationFK_OBRA_SAL" msprop:Generator_UserParentTable="obra_destino" msprop:Generator_ParentPropName="obra_destinoRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -35,10 +35,11 @@ Partial Class nuevaSalida
         Me.txtFecha = New System.Windows.Forms.TextBox()
         Me.txtUnidad = New System.Windows.Forms.TextBox()
         Me.cbxObra = New System.Windows.Forms.ComboBox()
+        Me.Obra_destinoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Salidas = New proyecto_eura.salidas()
         Me.txtNota = New System.Windows.Forms.TextBox()
         Me.txtNoSalidas = New System.Windows.Forms.TextBox()
         Me.txtNoNota = New System.Windows.Forms.TextBox()
-        Me.Salidas = New proyecto_eura.salidas()
         Me.EntradaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EntradaTableAdapter = New proyecto_eura.salidasTableAdapters.entradaTableAdapter()
         Me.TableAdapterManager = New proyecto_eura.salidasTableAdapters.TableAdapterManager()
@@ -61,20 +62,33 @@ Partial Class nuevaSalida
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblSelect = New System.Windows.Forms.Label()
-        Me.Obra_destinoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Obra_destinoTableAdapter = New proyecto_eura.salidasTableAdapters.obra_destinoTableAdapter()
         Me.Obra_destinoDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalidaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SalidaTableAdapter = New proyecto_eura.salidasTableAdapters.salidaTableAdapter()
+        Me.SalidaDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.txtNoNotaId = New System.Windows.Forms.TextBox()
+        CType(Me.Obra_destinoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Salidas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EntradaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EntradaBindingNavigator.SuspendLayout()
         CType(Me.EntradaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Obra_destinoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Obra_destinoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SalidaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -151,15 +165,16 @@ Partial Class nuevaSalida
         '
         Me.txtId.Location = New System.Drawing.Point(136, 51)
         Me.txtId.Name = "txtId"
-        Me.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtId.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtId.Size = New System.Drawing.Size(177, 20)
         Me.txtId.TabIndex = 1
         '
         'txtFecha
         '
+        Me.txtFecha.Enabled = False
         Me.txtFecha.Location = New System.Drawing.Point(136, 84)
         Me.txtFecha.Name = "txtFecha"
-        Me.txtFecha.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtFecha.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtFecha.Size = New System.Drawing.Size(177, 20)
         Me.txtFecha.TabIndex = 1
         '
@@ -169,25 +184,39 @@ Partial Class nuevaSalida
         Me.txtUnidad.Enabled = False
         Me.txtUnidad.Location = New System.Drawing.Point(136, 114)
         Me.txtUnidad.Name = "txtUnidad"
-        Me.txtUnidad.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtUnidad.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtUnidad.Size = New System.Drawing.Size(177, 20)
         Me.txtUnidad.TabIndex = 1
         '
         'cbxObra
         '
+        Me.cbxObra.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Obra_destinoBindingSource, "obra", True))
+        Me.cbxObra.DataSource = Me.Obra_destinoBindingSource
+        Me.cbxObra.DisplayMember = "obra"
         Me.cbxObra.FormattingEnabled = True
         Me.cbxObra.Location = New System.Drawing.Point(136, 142)
         Me.cbxObra.Name = "cbxObra"
         Me.cbxObra.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cbxObra.Size = New System.Drawing.Size(177, 21)
         Me.cbxObra.TabIndex = 2
+        Me.cbxObra.ValueMember = "obra"
+        '
+        'Obra_destinoBindingSource
+        '
+        Me.Obra_destinoBindingSource.DataMember = "obra_destino"
+        Me.Obra_destinoBindingSource.DataSource = Me.Salidas
+        '
+        'Salidas
+        '
+        Me.Salidas.DataSetName = "salidas"
+        Me.Salidas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtNota
         '
         Me.txtNota.Location = New System.Drawing.Point(136, 172)
         Me.txtNota.Multiline = True
         Me.txtNota.Name = "txtNota"
-        Me.txtNota.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtNota.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtNota.Size = New System.Drawing.Size(177, 124)
         Me.txtNota.TabIndex = 3
         '
@@ -195,7 +224,7 @@ Partial Class nuevaSalida
         '
         Me.txtNoSalidas.Location = New System.Drawing.Point(213, 311)
         Me.txtNoSalidas.Name = "txtNoSalidas"
-        Me.txtNoSalidas.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtNoSalidas.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtNoSalidas.Size = New System.Drawing.Size(100, 20)
         Me.txtNoSalidas.TabIndex = 3
         '
@@ -205,14 +234,9 @@ Partial Class nuevaSalida
         Me.txtNoNota.Enabled = False
         Me.txtNoNota.Location = New System.Drawing.Point(213, 347)
         Me.txtNoNota.Name = "txtNoNota"
-        Me.txtNoNota.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtNoNota.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtNoNota.Size = New System.Drawing.Size(100, 20)
         Me.txtNoNota.TabIndex = 3
-        '
-        'Salidas
-        '
-        Me.Salidas.DataSetName = "salidas"
-        Me.Salidas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'EntradaBindingSource
         '
@@ -245,7 +269,7 @@ Partial Class nuevaSalida
         Me.EntradaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.EntradaBindingNavigator.Name = "EntradaBindingNavigator"
         Me.EntradaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.EntradaBindingNavigator.Size = New System.Drawing.Size(845, 25)
+        Me.EntradaBindingNavigator.Size = New System.Drawing.Size(862, 25)
         Me.EntradaBindingNavigator.TabIndex = 4
         Me.EntradaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -358,7 +382,6 @@ Partial Class nuevaSalida
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "no_nota"
-        Me.DataGridViewTextBoxColumn2.Frozen = True
         Me.DataGridViewTextBoxColumn2.HeaderText = "Número de Nota"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
@@ -366,7 +389,6 @@ Partial Class nuevaSalida
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "descripcion"
-        Me.DataGridViewTextBoxColumn3.Frozen = True
         Me.DataGridViewTextBoxColumn3.HeaderText = "Descripción"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
@@ -375,7 +397,6 @@ Partial Class nuevaSalida
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "cantidad"
-        Me.DataGridViewTextBoxColumn7.Frozen = True
         Me.DataGridViewTextBoxColumn7.HeaderText = "Cantidad"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
@@ -384,7 +405,6 @@ Partial Class nuevaSalida
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "tipo_unidad"
-        Me.DataGridViewTextBoxColumn8.Frozen = True
         Me.DataGridViewTextBoxColumn8.HeaderText = "Unidad"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
@@ -400,11 +420,6 @@ Partial Class nuevaSalida
         Me.lblSelect.Size = New System.Drawing.Size(223, 20)
         Me.lblSelect.TabIndex = 0
         Me.lblSelect.Text = "Selecciona el Número de Nota"
-        '
-        'Obra_destinoBindingSource
-        '
-        Me.Obra_destinoBindingSource.DataMember = "obra_destino"
-        Me.Obra_destinoBindingSource.DataSource = Me.Salidas
         '
         'Obra_destinoTableAdapter
         '
@@ -445,12 +460,94 @@ Partial Class nuevaSalida
         Me.DataGridViewTextBoxColumn6.HeaderText = "nota"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
+        'SalidaBindingSource
+        '
+        Me.SalidaBindingSource.DataMember = "salida"
+        Me.SalidaBindingSource.DataSource = Me.Salidas
+        '
+        'SalidaTableAdapter
+        '
+        Me.SalidaTableAdapter.ClearBeforeFill = True
+        '
+        'SalidaDataGridView
+        '
+        Me.SalidaDataGridView.AutoGenerateColumns = False
+        Me.SalidaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SalidaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15})
+        Me.SalidaDataGridView.DataSource = Me.SalidaBindingSource
+        Me.SalidaDataGridView.Location = New System.Drawing.Point(376, 443)
+        Me.SalidaDataGridView.Name = "SalidaDataGridView"
+        Me.SalidaDataGridView.Size = New System.Drawing.Size(410, 113)
+        Me.SalidaDataGridView.TabIndex = 18
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "id_salida"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "id_salida"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "fecha_salida"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "fecha_salida"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "unidad"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "unidad"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "obra"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "obra"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "nota"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "nota"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "num_salidas"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "num_salidas"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.DataPropertyName = "entrada"
+        Me.DataGridViewTextBoxColumn15.HeaderText = "entrada"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Location = New System.Drawing.Point(238, 386)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.TabIndex = 19
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
+        'txtNoNotaId
+        '
+        Me.txtNoNotaId.Location = New System.Drawing.Point(341, 388)
+        Me.txtNoNotaId.Name = "txtNoNotaId"
+        Me.txtNoNotaId.Size = New System.Drawing.Size(100, 20)
+        Me.txtNoNotaId.TabIndex = 20
+        '
         'nuevaSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(845, 721)
+        Me.ClientSize = New System.Drawing.Size(862, 733)
+        Me.Controls.Add(Me.txtNoNotaId)
+        Me.Controls.Add(Me.btnGuardar)
+        Me.Controls.Add(Me.SalidaDataGridView)
         Me.Controls.Add(Me.Obra_destinoDataGridView)
         Me.Controls.Add(Me.EntradaDataGridView)
         Me.Controls.Add(Me.EntradaBindingNavigator)
@@ -473,14 +570,16 @@ Partial Class nuevaSalida
         Me.Name = "nuevaSalida"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Nueva Salida"
+        CType(Me.Obra_destinoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Salidas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EntradaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EntradaBindingNavigator.ResumeLayout(False)
         Me.EntradaBindingNavigator.PerformLayout()
         CType(Me.EntradaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Obra_destinoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Obra_destinoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SalidaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -517,10 +616,6 @@ Partial Class nuevaSalida
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents EntradaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents EntradaDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents lblSelect As System.Windows.Forms.Label
     Friend WithEvents Obra_destinoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Obra_destinoTableAdapter As proyecto_eura.salidasTableAdapters.obra_destinoTableAdapter
@@ -529,4 +624,20 @@ Partial Class nuevaSalida
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SalidaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents SalidaTableAdapter As proyecto_eura.salidasTableAdapters.salidaTableAdapter
+    Friend WithEvents SalidaDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents txtNoNotaId As System.Windows.Forms.TextBox
 End Class
