@@ -56,14 +56,14 @@
         End If
     End Sub
 
-   
+
     Private Sub cbxObra_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbxObra.KeyPress
         e.Handled = True
     End Sub
 
-    
 
-  
+
+
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
         'VALIDAR '
@@ -89,8 +89,8 @@
                 MiCadena = "S"
 
 
-                Me.EntradaTableAdapter.actualizar(txtNoNota.Text, lblDes.Text, lblPro.Text, lblEmp.Text, lblPre.Text, txtCantidad.Text, txtUnidad.Text, lblNot.Text, lblFec.Text, txtNoNotaId.Text)
-                Me.EntradaTableAdapter.Fill(Me.Salidas.entrada)
+                'Me.EntradaTableAdapter.actualizar(txtNoNota.Text, lblDes.Text, lblPro.Text, lblEmp.Text, lblPre.Text, txtCantidad.Text, txtUnidad.Text, lblNot.Text, lblFec.Text, txtNoNotaId.Text)
+                ' Me.EntradaTableAdapter.Fill(Me.Salidas.entrada)
 
             Else
 
@@ -101,16 +101,7 @@
 
         'AQUI SE REALIZARA LA ACTUALIZACIÓN
 
-
-
-
-
-
-
-
-
-
     End Sub
 
- 
+  
 End Class
