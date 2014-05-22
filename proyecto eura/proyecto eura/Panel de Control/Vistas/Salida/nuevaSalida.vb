@@ -89,8 +89,8 @@
                 MiCadena = "S"
 
 
-                'Me.EntradaTableAdapter.actualizar(txtNoNota.Text, lblDes.Text, lblPro.Text, lblEmp.Text, lblPre.Text, txtCantidad.Text, txtUnidad.Text, lblNot.Text, lblFec.Text, txtNoNotaId.Text)
-                ' Me.EntradaTableAdapter.Fill(Me.Salidas.entrada)
+                Me.EntradaTableAdapter.actualizar(txtNoNota.Text, lblDes.Text, lblPro.Text, lblEmp.Text, lblPre.Text, txtCantidad.Text, txtUnidad.Text, lblNot.Text, lblFec.Text, txtNoNotaId.Text)
+                Me.EntradaTableAdapter.Fill(Me.Salidas.entrada)
 
             Else
 
