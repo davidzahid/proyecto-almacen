@@ -35,7 +35,4 @@
    
 
 
-    Private Sub ApplicationTitle_Click(sender As Object, e As EventArgs) Handles ApplicationTitle.Click
-
-    End Sub
 End Class
