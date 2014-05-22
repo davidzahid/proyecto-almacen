@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <TargetCulture>es-MX</TargetCulture>
     <PublisherName>David Zahid Jiménez Grez</PublisherName>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
