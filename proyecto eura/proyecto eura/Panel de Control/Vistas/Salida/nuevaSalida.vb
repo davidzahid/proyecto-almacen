@@ -77,24 +77,42 @@
             MessageBox.Show("Intento fallido")
             txtNoSalidas.Text = ""
         Else
-            txtCantidad.Text = txtCantidad.Text - txtNoSalidas.Text
-
-
-            Dim Mensaje, Estilo, Título, Respuesta, MiCadena
-            Mensaje = "¿Esta seguro que desea realizar esta operación?"
-            Estilo = vbYesNo + vbCritical
-            Título = "ADVERTENCIA"
-            Respuesta = MsgBox(Mensaje, Estilo, Título)
-            If Respuesta = vbYes Then
-                MiCadena = "S"
-
-
-                Me.EntradaTableAdapter.actualizar(txtNoNota.Text, lblDes.Text, lblPro.Text, lblEmp.Text, lblPre.Text, txtCantidad.Text, txtUnidad.Text, lblNot.Text, lblFec.Text, txtNoNotaId.Text)
-                Me.EntradaTableAdapter.Fill(Me.Salidas.entrada)
-
+            If (txtObra.Text = "") Then
+                MessageBox.Show("Por favor seleccione obra de destino")
             Else
+                txtCantidad.Text = txtCantidad.Text - txtNoSalidas.Text
 
+
+                Dim Mensaje, Estilo, Título, Respuesta, MiCadena
+                Mensaje = "¿Esta seguro que desea realizar esta operación?"
+                Estilo = vbYesNo + vbCritical
+                Título = "ADVERTENCIA"
+                Respuesta = MsgBox(Mensaje, Estilo, Título)
+                If Respuesta = vbYes Then
+                    MiCadena = "S"
+
+
+                    Me.EntradaTableAdapter.actualizar(txtNoNota.Text, lblDes.Text, lblPro.Text, lblEmp.Text, lblPre.Text, txtCantidad.Text, txtUnidad.Text, lblNot.Text, lblFec.Text, txtNoNotaId.Text)
+                    Me.EntradaTableAdapter.Fill(Me.Salidas.entrada)
+
+                    Me.SalidaTableAdapter.guardar_salida(txtId.Text, txtFecha.Text, txtUnidad.Text, txtObra.Text, txtNota.Text, txtNoSalidas.Text, txtNoNotaId.Text)
+                    Me.SalidaTableAdapter.Fill(Me.Salidas.salida)
+
+                    txtObra.Text = ""
+                    txtNoSalidas.Text = ""
+                    txtNota.Text = ""
+                    txtNoNotaId.Text = ""
+
+                    EntradaDataGridView.ClearSelection()
+                    EntradaDataGridView.Refresh()
+
+
+
+                Else
+
+                End If
             End If
+
         End If
 
 
@@ -103,5 +121,9 @@
 
     End Sub
 
-  
+
+    Private Sub cbxObra_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxObra.SelectedIndexChanged
+        txtObra.Text = cbxObra.SelectedValue()
+        txtObra.Text = Val(Me.Obra_destinoTableAdapter.id_de_obra(txtObra.Text))
+    End Sub
 End Class
