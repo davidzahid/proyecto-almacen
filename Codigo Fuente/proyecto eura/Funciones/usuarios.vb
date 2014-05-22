@@ -15,7 +15,7 @@ Module usuarios
         Dim sSql As String
         Dim sw As Boolean = False
         Try
-            oconexion.ConnectionString = "server=localhost;database=eura_database;user id=root;password=david"
+            oconexion.ConnectionString = "server=172.20.10.2;database=eura_database;user id=root;password=toor"
             sSql = "SELECT * FROM empleado WHERE username = '" & usuario & "' and password = '" & password & "' and status = 'Habilitado'"
             odataadapter = New MySqlDataAdapter(sSql, oconexion)
             oconexion.Open()
@@ -45,7 +45,7 @@ Module usuarios
         Dim sSql As String
         Dim sw As Boolean = False
         Try
-            oconexion.ConnectionString = "server=localhost;database=eura_database;user id=root;password=david"
+            oconexion.ConnectionString = "server=172.20.10.2;database=eura_database;user id=root;password=toor"
             sSql = "SELECT * FROM empleado WHERE username = '" & usuario & "' and password = '" & password & "'"
             odataadapter = New MySqlDataAdapter(sSql, oconexion)
             oconexion.Open()
@@ -70,10 +70,10 @@ Module usuarios
 
     Public Sub conectar()
 
-        Dim servidor As String = "localhost"
+        Dim servidor As String = "172.16.42.154"
         Dim baseDatos As String = "eura_database"
         Dim usuario As String = "root"
-        Dim password As String = "david"
+        Dim password As String = "toor"
 
 
         Try

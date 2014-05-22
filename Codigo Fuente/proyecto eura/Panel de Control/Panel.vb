@@ -34,6 +34,10 @@
 
     End Sub
 
+    Private Sub Panel_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Acceso.Close()
+    End Sub
+
 
 
     Private Sub Panel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -89,5 +93,9 @@
 
     Private Sub GestionDeObrasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeObrasToolStripMenuItem.Click
         gestionObras.Show()
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Acceso.Close()
     End Sub
 End Class

@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=david;persistsecurityinfo=True;database=eu"& _ 
-            "ra_database")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=172.20.10.2;user id=root;password=toor;persistsecurityinfo=True;database=e"& _ 
+            "ura_database")>  _
         Public ReadOnly Property base_eura() As String
             Get
                 Return CType(Me("base_eura"),String)

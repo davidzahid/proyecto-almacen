@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2014-05-21 23:13:24
+Date: 2014-05-22 12:25:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -39,7 +39,9 @@ INSERT INTO `empleado` VALUES ('2', 'david', 'Em15076', '15004', '1', 'Habilitad
 INSERT INTO `empleado` VALUES ('3', 'david peresz', 'Em14457', '14747', '2', 'Habilitado');
 INSERT INTO `empleado` VALUES ('4', 'david zahid', 'david', '1234', '1', 'Habilitado');
 INSERT INTO `empleado` VALUES ('5', 'adal', 'adal', '1234', '2', 'Habilitado');
-INSERT INTO `empleado` VALUES ('6', 'christian', 'christian', '1234', '2', 'Deshabilitado');
+INSERT INTO `empleado` VALUES ('6', 'christian', 'christian', '1234', '1', 'Habilitado');
+INSERT INTO `empleado` VALUES ('7', 'eduardo', 'eduardo1', '123', '2', 'Habilitado');
+INSERT INTO `empleado` VALUES ('8', 'raul', 'raul2014', '1', '2', 'Habilitado');
 
 -- ----------------------------
 -- Table structure for entrada
@@ -61,7 +63,7 @@ CREATE TABLE `entrada` (
   KEY `FK_EMP_ENT` (`empleado`),
   CONSTRAINT `FK_EMP_ENT` FOREIGN KEY (`empleado`) REFERENCES `empleado` (`id_empleado`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_PROV_ENT` FOREIGN KEY (`proveedor`) REFERENCES `proveedor` (`id_proveedor`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- ----------------------------
 -- Records of entrada
@@ -73,7 +75,7 @@ INSERT INTO `entrada` VALUES ('7', '12322', 'das', '2', '3', '1.00', '0', 'Metro
 INSERT INTO `entrada` VALUES ('8', '123', 'dsaads', '2', '3', '12.00', '21', 'Kilogramo', 'dsadsa', '2014-05-20 20:37:02');
 INSERT INTO `entrada` VALUES ('9', '312', 'Varilla de 3/4', '2', '3', '12.00', '1', 'Metro', 'DASDA', '2014-05-20 20:42:55');
 INSERT INTO `entrada` VALUES ('12', '123414', 'DADSADSAD', '2', '3', '21.00', '14', 'Metro Cuadrado', 'DSDA', '2014-05-21 14:03:45');
-INSERT INTO `entrada` VALUES ('14', '3124A', 'DAVID 1/3', '2', '3', '12.10', '1498', 'Kilogramo', 'NO SE ENCONTRO NADA', '2014-05-21 14:46:22');
+INSERT INTO `entrada` VALUES ('14', '3124A', 'DAVID 1/3', '2', '3', '12.10', '1486', 'Kilogramo', 'NO SE ENCONTRO NADA', '2014-05-21 14:46:22');
 INSERT INTO `entrada` VALUES ('15', 'SAA131', 'DASDASAD', '2', '3', '20000.00', '12', 'Kilogramo', 'NINGUNA131', '2014-05-21 14:46:22');
 INSERT INTO `entrada` VALUES ('16', 'WQEQEQWEWQ', 'DADSA', '2', '3', '1.00', '0', 'Metro', 'A', '2014-05-21 14:49:25');
 INSERT INTO `entrada` VALUES ('17', 'DASAFASAFA', 'FASFAS', '2', '3', '1.00', '0', 'Metro Cuadrado', 'S', '2014-05-21 14:50:14');
@@ -85,6 +87,7 @@ INSERT INTO `entrada` VALUES ('23', 'sfsfaafsfa', 'vfsfsasfasfa', '2', '3', '111
 INSERT INTO `entrada` VALUES ('24', 'dsadsaddas', 'dadsadsa', '2', '3', '12312.00', '12331', 'Kilogramo', 'fsafas', '2014-05-21 15:13:25');
 INSERT INTO `entrada` VALUES ('25', 'DASASADAS', 'VARILL', '1', '3', '123.10', '123', 'Mililitros', 'DDADSA', '2014-05-21 16:04:35');
 INSERT INTO `entrada` VALUES ('26', '1123', 'q', '2', '3', '32123232.00', '23', 'Metro', 'd', '2014-05-21 17:02:43');
+INSERT INTO `entrada` VALUES ('27', '2142141', 'varilla 3/4', '2', '3', '1231.23', '0', 'Tonelada', 'Se ingresaron 14 varillas al almacén', '2014-05-21 23:30:28');
 
 -- ----------------------------
 -- Table structure for material
@@ -119,7 +122,7 @@ CREATE TABLE `movimientos_sistema` (
   PRIMARY KEY (`id_movimiento`),
   KEY `FK_EMP_MOVSIS` (`empleado`),
   CONSTRAINT `FK_EMP_MOVSIS` FOREIGN KEY (`empleado`) REFERENCES `empleado` (`id_empleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=367 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=388 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- ----------------------------
 -- Records of movimientos_sistema
@@ -490,6 +493,27 @@ INSERT INTO `movimientos_sistema` VALUES ('363', 'Login', 'Accedio al Sistema un
 INSERT INTO `movimientos_sistema` VALUES ('364', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-21 23:05:34', '4');
 INSERT INTO `movimientos_sistema` VALUES ('365', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-21 23:06:45', '4');
 INSERT INTO `movimientos_sistema` VALUES ('366', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-21 23:09:02', '4');
+INSERT INTO `movimientos_sistema` VALUES ('367', 'Login', 'Accedio al Sistema un Empleado registrado como: Em14457', '2014-05-21 23:30:23', '3');
+INSERT INTO `movimientos_sistema` VALUES ('368', 'Registro de Entrada', 'Entrada GUARDADA por empleado: Em14457', '2014-05-21 23:30:28', '3');
+INSERT INTO `movimientos_sistema` VALUES ('369', 'Login', 'Accedio al Sistema un Administrador registrado como: christian', '2014-05-21 23:32:01', '6');
+INSERT INTO `movimientos_sistema` VALUES ('370', 'Login', 'Accedio al Sistema un Administrador registrado como: eduardo1', '2014-05-21 23:34:52', '7');
+INSERT INTO `movimientos_sistema` VALUES ('371', 'Login', 'Accedio al Sistema un Administrador registrado como: eduardo1', '2014-05-21 23:35:23', '7');
+INSERT INTO `movimientos_sistema` VALUES ('372', 'Login', 'Accedio al Sistema un Empleado registrado como: eduardo1', '2014-05-21 23:35:44', '7');
+INSERT INTO `movimientos_sistema` VALUES ('373', 'Registro de Salida', 'Salida GUARDADA por empleado: eduardo1', '2014-05-21 23:35:51', '7');
+INSERT INTO `movimientos_sistema` VALUES ('374', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-21 23:37:05', '4');
+INSERT INTO `movimientos_sistema` VALUES ('375', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-21 23:43:00', '4');
+INSERT INTO `movimientos_sistema` VALUES ('376', 'Login', 'Accedio al Sistema un Administrador registrado como: christian', '2014-05-21 23:43:21', '6');
+INSERT INTO `movimientos_sistema` VALUES ('377', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-21 23:54:56', '4');
+INSERT INTO `movimientos_sistema` VALUES ('378', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-22 00:47:12', '4');
+INSERT INTO `movimientos_sistema` VALUES ('379', 'Login', 'Accedio al Sistema un Administrador registrado como: christian', '2014-05-22 00:47:33', '6');
+INSERT INTO `movimientos_sistema` VALUES ('380', 'Login', 'Accedio al Sistema un Empleado registrado como: adal', '2014-05-22 00:50:14', '5');
+INSERT INTO `movimientos_sistema` VALUES ('381', 'Login', 'Accedio al Sistema un Administrador registrado como: christian', '2014-05-22 09:39:41', '6');
+INSERT INTO `movimientos_sistema` VALUES ('382', 'Registro de Salida', 'Salida GUARDADA por administrador: christian', '2014-05-22 09:39:50', '6');
+INSERT INTO `movimientos_sistema` VALUES ('383', 'Login', 'Accedio al Sistema un Administrador registrado como: christian', '2014-05-22 09:40:52', '6');
+INSERT INTO `movimientos_sistema` VALUES ('384', 'Login', 'Accedio al Sistema un Empleado registrado como: raul2014', '2014-05-22 09:41:29', '8');
+INSERT INTO `movimientos_sistema` VALUES ('385', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-22 10:01:10', '4');
+INSERT INTO `movimientos_sistema` VALUES ('386', 'Login', 'Accedio al Sistema un Administrador registrado como: david', '2014-05-22 12:03:42', '4');
+INSERT INTO `movimientos_sistema` VALUES ('387', 'Login', 'Accedio al Sistema un Administrador registrado como: Em15076', '2014-05-22 12:20:14', '2');
 
 -- ----------------------------
 -- Table structure for obra_destino
@@ -586,3 +610,5 @@ INSERT INTO `salida` VALUES ('12', '2014-05-21 20:44:00', 'Metro', '1', '', '1',
 INSERT INTO `salida` VALUES ('13', '2014-05-21 20:48:00', 'Metro Cuadrado', '1', '', '3213', '21');
 INSERT INTO `salida` VALUES ('14', '2014-05-21 21:15:00', 'Metro Cubico', '1', 'Para el contador Ramon', '12', '18');
 INSERT INTO `salida` VALUES ('15', '2014-05-21 21:24:00', 'Metro', '1', '', '1', '3');
+INSERT INTO `salida` VALUES ('16', '2014-05-21 23:35:00', 'Tonelada', '1', 'PARA EL LICENCIADO', '14', '27');
+INSERT INTO `salida` VALUES ('17', '2014-05-22 09:39:00', 'Kilogramo', '1', '', '12', '14');

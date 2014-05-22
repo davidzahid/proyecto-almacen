@@ -43,23 +43,23 @@ Partial Class Panel
         Me.EntradasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ObraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionDeObrasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Movimientos = New proyecto_eura.movimientos()
-        Me.MovimientossistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Movimientos_sistemaTableAdapter = New proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter()
-        Me.movimientos_sistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblRol = New System.Windows.Forms.Label()
         Me.lblLogin = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblSistema = New System.Windows.Forms.Label()
-        Me.ObraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestionDeObrasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Movimientos = New proyecto_eura.movimientos()
+        Me.MovimientossistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Movimientos_sistemaTableAdapter = New proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter()
+        Me.movimientos_sistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.movimientos_sistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'value
@@ -189,6 +189,19 @@ Partial Class Panel
         Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(144, 22)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
         '
+        'ObraToolStripMenuItem
+        '
+        Me.ObraToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDeObrasToolStripMenuItem})
+        Me.ObraToolStripMenuItem.Name = "ObraToolStripMenuItem"
+        Me.ObraToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
+        Me.ObraToolStripMenuItem.Text = "Obra"
+        '
+        'GestionDeObrasToolStripMenuItem
+        '
+        Me.GestionDeObrasToolStripMenuItem.Name = "GestionDeObrasToolStripMenuItem"
+        Me.GestionDeObrasToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.GestionDeObrasToolStripMenuItem.Text = "Gestión de Obras"
+        '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeToolStripMenuItem})
@@ -201,25 +214,6 @@ Partial Class Panel
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
         Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
-        '
-        'Movimientos
-        '
-        Me.Movimientos.DataSetName = "movimientos"
-        Me.Movimientos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MovimientossistemaBindingSource
-        '
-        Me.MovimientossistemaBindingSource.DataMember = "movimientos_sistema"
-        Me.MovimientossistemaBindingSource.DataSource = Me.Movimientos
-        '
-        'Movimientos_sistemaTableAdapter
-        '
-        Me.Movimientos_sistemaTableAdapter.ClearBeforeFill = True
-        '
-        'movimientos_sistemaBindingSource
-        '
-        Me.movimientos_sistemaBindingSource.DataMember = "movimientos_sistema"
-        Me.movimientos_sistemaBindingSource.DataSource = Me.Movimientos
         '
         'lblRol
         '
@@ -263,18 +257,24 @@ Partial Class Panel
         Me.lblSistema.TabIndex = 11
         Me.lblSistema.Text = "Almacén EURA"
         '
-        'ObraToolStripMenuItem
+        'Movimientos
         '
-        Me.ObraToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDeObrasToolStripMenuItem})
-        Me.ObraToolStripMenuItem.Name = "ObraToolStripMenuItem"
-        Me.ObraToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
-        Me.ObraToolStripMenuItem.Text = "Obra"
+        Me.Movimientos.DataSetName = "movimientos"
+        Me.Movimientos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'GestionDeObrasToolStripMenuItem
+        'MovimientossistemaBindingSource
         '
-        Me.GestionDeObrasToolStripMenuItem.Name = "GestionDeObrasToolStripMenuItem"
-        Me.GestionDeObrasToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.GestionDeObrasToolStripMenuItem.Text = "Gestión de Obras"
+        Me.MovimientossistemaBindingSource.DataMember = "movimientos_sistema"
+        Me.MovimientossistemaBindingSource.DataSource = Me.Movimientos
+        '
+        'Movimientos_sistemaTableAdapter
+        '
+        Me.Movimientos_sistemaTableAdapter.ClearBeforeFill = True
+        '
+        'movimientos_sistemaBindingSource
+        '
+        Me.movimientos_sistemaBindingSource.DataMember = "movimientos_sistema"
+        Me.movimientos_sistemaBindingSource.DataSource = Me.Movimientos
         '
         'Panel
         '
@@ -288,17 +288,17 @@ Partial Class Panel
         Me.Controls.Add(Me.lblRol)
         Me.Controls.Add(Me.value)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Panel"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Panel"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.movimientos_sistemaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
