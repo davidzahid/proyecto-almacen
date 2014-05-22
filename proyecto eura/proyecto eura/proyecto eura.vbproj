@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>proyecto_eura.My.MyApplication</StartupObject>
     <RootNamespace>proyecto_eura</RootNamespace>
-    <AssemblyName>proyecto eura</AssemblyName>
+    <AssemblyName>Almacen Eura</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -23,6 +23,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-MX</TargetCulture>
+    <PublisherName>David Zahid Jiménez Grez</PublisherName>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -36,7 +38,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>proyecto eura.xml</DocumentationFile>
+    <DocumentationFile>Almacen Eura.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -46,7 +48,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>proyecto eura.xml</DocumentationFile>
+    <DocumentationFile>Almacen Eura.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -72,6 +74,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tools.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -112,6 +117,7 @@
       <DependentUpon>Acceso.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="entradas.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -134,6 +140,12 @@
       <DependentUpon>accesoadmin.vb</DependentUpon>
     </Compile>
     <Compile Include="Panel de Control\accesoadmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Ayuda\acercade.Designer.vb">
+      <DependentUpon>acercade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Ayuda\acercade.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.Designer.vb">
@@ -193,6 +205,12 @@
     <Compile Include="Panel de Control\Vistas\Salida\nuevaSalida.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\presentacion.Designer.vb">
+      <DependentUpon>presentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\presentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="salidas.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -208,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Reportes\movimientos_sistema.rdlc" />
     <EmbeddedResource Include="Panel de Control\Reportes\reporte_entradas.rdlc" />
+    <EmbeddedResource Include="Panel de Control\Vistas\Ayuda\acercade.resx">
+      <DependentUpon>acercade.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.resx">
       <DependentUpon>nuevoEmpleado.vb</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Salida\nuevaSalida.resx">
       <DependentUpon>nuevaSalida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\presentacion.resx">
+      <DependentUpon>presentacion.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -283,7 +307,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Panel de Control\Vistas\Ayuda\" />
+    <Content Include="Tools.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

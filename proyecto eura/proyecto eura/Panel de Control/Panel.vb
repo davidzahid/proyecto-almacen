@@ -62,4 +62,7 @@
     End Sub
 
 
+    Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
+        acercade.Show()
+    End Sub
 End Class
