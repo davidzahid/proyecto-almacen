@@ -23,6 +23,7 @@ Partial Class Panel
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Panel))
         Me.value = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,10 +54,15 @@ Partial Class Panel
         Me.MovimientossistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Movimientos_sistemaTableAdapter = New proyecto_eura.movimientosTableAdapters.movimientos_sistemaTableAdapter()
         Me.movimientos_sistemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.lblRol = New System.Windows.Forms.Label()
+        Me.lblLogin = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.lblSistema = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.movimientos_sistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'value
@@ -126,7 +132,7 @@ Partial Class Panel
         'NuevaToolStripMenuItem1
         '
         Me.NuevaToolStripMenuItem1.Name = "NuevaToolStripMenuItem1"
-        Me.NuevaToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.NuevaToolStripMenuItem1.Size = New System.Drawing.Size(108, 22)
         Me.NuevaToolStripMenuItem1.Text = "Nueva"
         '
         'EmpleadosToolStripMenuItem
@@ -248,12 +254,58 @@ Partial Class Panel
         Me.movimientos_sistemaBindingSource.DataMember = "movimientos_sistema"
         Me.movimientos_sistemaBindingSource.DataSource = Me.Movimientos
         '
+        'lblRol
+        '
+        Me.lblRol.AutoSize = True
+        Me.lblRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRol.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblRol.Location = New System.Drawing.Point(34, 120)
+        Me.lblRol.Name = "lblRol"
+        Me.lblRol.Size = New System.Drawing.Size(188, 39)
+        Me.lblRol.TabIndex = 11
+        Me.lblRol.Text = "Bienvenido"
+        '
+        'lblLogin
+        '
+        Me.lblLogin.AutoSize = True
+        Me.lblLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblLogin.Location = New System.Drawing.Point(602, 36)
+        Me.lblLogin.Name = "lblLogin"
+        Me.lblLogin.Size = New System.Drawing.Size(71, 25)
+        Me.lblLogin.TabIndex = 12
+        Me.lblLogin.Text = "Login:"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(435, 120)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(394, 193)
+        Me.PictureBox2.TabIndex = 13
+        Me.PictureBox2.TabStop = False
+        '
+        'lblSistema
+        '
+        Me.lblSistema.AutoSize = True
+        Me.lblSistema.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSistema.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblSistema.Location = New System.Drawing.Point(34, 36)
+        Me.lblSistema.Name = "lblSistema"
+        Me.lblSistema.Size = New System.Drawing.Size(258, 39)
+        Me.lblSistema.TabIndex = 11
+        Me.lblSistema.Text = "Almacén EURA"
+        '
         'Panel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(841, 480)
+        Me.ClientSize = New System.Drawing.Size(841, 326)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.lblLogin)
+        Me.Controls.Add(Me.lblSistema)
+        Me.Controls.Add(Me.lblRol)
         Me.Controls.Add(Me.value)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -266,6 +318,7 @@ Partial Class Panel
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.movimientos_sistemaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -300,4 +353,8 @@ Partial Class Panel
     Friend WithEvents SalidasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EmpleadosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents lblRol As System.Windows.Forms.Label
+    Friend WithEvents lblLogin As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents lblSistema As System.Windows.Forms.Label
 End Class
