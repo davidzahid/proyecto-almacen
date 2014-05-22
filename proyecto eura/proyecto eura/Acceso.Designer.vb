@@ -70,19 +70,21 @@ Partial Class Acceso
         '
         'txtUsuario
         '
+        Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsuario.Location = New System.Drawing.Point(269, 26)
         Me.txtUsuario.MaxLength = 30
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(131, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(131, 35)
         Me.txtUsuario.TabIndex = 0
         '
         'txtContrasena
         '
+        Me.txtContrasena.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtContrasena.Location = New System.Drawing.Point(296, 66)
         Me.txtContrasena.MaxLength = 16
         Me.txtContrasena.Name = "txtContrasena"
         Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContrasena.Size = New System.Drawing.Size(104, 20)
+        Me.txtContrasena.Size = New System.Drawing.Size(104, 35)
         Me.txtContrasena.TabIndex = 1
         '
         'btnAcceder
@@ -117,7 +119,7 @@ Partial Class Acceso
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(188, 26)
+        Me.Label1.Location = New System.Drawing.Point(188, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(64, 20)
         Me.Label1.TabIndex = 4
@@ -128,7 +130,7 @@ Partial Class Acceso
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(188, 66)
+        Me.Label2.Location = New System.Drawing.Point(188, 76)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(92, 20)
         Me.Label2.TabIndex = 4
