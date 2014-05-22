@@ -21,6 +21,8 @@
             Panel.EmpleadosToolStripMenuItem.Enabled = True
 
 
+          
+
             Panel.lblRol.Text = "Bienvenido Administrador"
             Panel.lblLogin.Text = "Usuario: " + Acceso.txtUsuario.Text
 
@@ -44,6 +46,7 @@
             Panel.lblRol.Text = "Bienvenido Empleado"
             Panel.lblLogin.Text = "Usuario: " + Acceso.txtUsuario.Text
             Return False
+
 
 
         End If

@@ -199,6 +199,18 @@
     <Compile Include="Panel de Control\Vistas\Reportes\movimientosSistema.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Panel de Control\Vistas\Reportes\reporteProveedores.Designer.vb">
+      <DependentUpon>reporteProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Reportes\reporteProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Reportes\reporteSalidas.Designer.vb">
+      <DependentUpon>reporteSalidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Reportes\reporteSalidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Panel de Control\Vistas\Salida\nuevaSalida.Designer.vb">
       <DependentUpon>nuevaSalida.vb</DependentUpon>
     </Compile>
@@ -225,6 +237,8 @@
       <DependentUpon>accesoadmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Reportes\movimientos_sistema.rdlc" />
+    <EmbeddedResource Include="Panel de Control\Reportes\reporteProveedores.rdlc" />
+    <EmbeddedResource Include="Panel de Control\Reportes\reporteSalidas.rdlc" />
     <EmbeddedResource Include="Panel de Control\Reportes\reporte_entradas.rdlc" />
     <EmbeddedResource Include="Panel de Control\Vistas\Ayuda\acercade.resx">
       <DependentUpon>acercade.vb</DependentUpon>
@@ -252,6 +266,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Reportes\reporteEntradas.resx">
       <DependentUpon>reporteEntradas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel de Control\Vistas\Reportes\reporteProveedores.resx">
+      <DependentUpon>reporteProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel de Control\Vistas\Reportes\reporteSalidas.resx">
+      <DependentUpon>reporteSalidas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Salida\nuevaSalida.resx">
       <DependentUpon>nuevaSalida.vb</DependentUpon>

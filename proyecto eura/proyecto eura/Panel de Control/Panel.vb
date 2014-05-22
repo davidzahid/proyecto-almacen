@@ -65,4 +65,24 @@
     Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
         acercade.Show()
     End Sub
+
+
+    Private Sub SalidasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalidasToolStripMenuItem.Click
+        reporteSalidas.Show()
+    End Sub
+
+    Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
+        reporteProveedores.Show()
+    End Sub
+
+    Private Sub GestionDeEmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeEmpleadosToolStripMenuItem.Click
+        'FALTA DISEÑAR EL FORMULARIO DE EMPLEADOS'
+        nuevoEmpleado.Show()
+
+    End Sub
+
+    Private Sub GestionDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeProveedoresToolStripMenuItem.Click
+        'FALTA DISEÑAR EL FORMULARIO DE EMPLEADOS'
+        nuevoProveedor.Show()
+    End Sub
 End Class
