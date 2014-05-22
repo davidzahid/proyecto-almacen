@@ -26,8 +26,15 @@
         txtFecha.Text = timestamp.ToString(("dd/MM/yyyy HH:mm tt"))
         txtNoNotaId.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(0).Value()
         txtNoNota.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(1).Value()
+        lblDes.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(2).Value()
         txtCantidad.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(3).Value()
         txtUnidad.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(4).Value()
+        lblPro.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(5).Value()
+        lblEmp.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(6).Value()
+        lblPre.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(7).Value()
+        lblNot.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(8).Value()
+        lblFec.Text = Me.EntradaDataGridView.Rows(e.RowIndex).Cells(9).Value()
+
         txtNoSalidas.Enabled = True
         'GENERA ID'
         txtId.Text = Val(Me.SalidaTableAdapter.identificador())
@@ -60,27 +67,50 @@
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
         'VALIDAR '
-        Try
-            If (txtCantidad.Text < txtNoSalidas.Text) Then
-                MessageBox.Show("Cantidad Disponible:" + txtCantidad.Text)
-                txtNoSalidas.Text = ""
-            ElseIf (txtNoSalidas.Text = "") Then
-                MessageBox.Show("Inserte un Número de salidas")
-            ElseIf (txtNoSalidas.Text = 0) Then
-                MessageBox.Show("Intento fallido")
-                txtNoSalidas.Text = ""
+
+        If (txtCantidad.Text < txtNoSalidas.Text) Then
+            MessageBox.Show("Cantidad Disponible:" + txtCantidad.Text)
+            txtNoSalidas.Text = ""
+        ElseIf (txtNoSalidas.Text = "") Then
+            MessageBox.Show("Inserte un Número de salidas")
+        ElseIf (txtNoSalidas.Text = 0) Then
+            MessageBox.Show("Intento fallido")
+            txtNoSalidas.Text = ""
+        Else
+            txtCantidad.Text = txtCantidad.Text - txtNoSalidas.Text
+
+
+            Dim Mensaje, Estilo, Título, Respuesta, MiCadena
+            Mensaje = "¿Esta seguro que desea realizar esta operación?"
+            Estilo = vbYesNo + vbCritical
+            Título = "ADVERTENCIA"
+            Respuesta = MsgBox(Mensaje, Estilo, Título)
+            If Respuesta = vbYes Then
+                MiCadena = "S"
+
+
+                Me.EntradaTableAdapter.actualizar(txtNoNota.Text, lblDes.Text, lblPro.Text, lblEmp.Text, lblPre.Text, txtCantidad.Text, txtUnidad.Text, lblNot.Text, lblFec.Text, txtNoNotaId.Text)
+                Me.EntradaTableAdapter.Fill(Me.Salidas.entrada)
+
             Else
-                txtCantidad.Text = txtCantidad.Text - txtNoSalidas.Text
+
             End If
-
-            If (cbxObra.SelectedValue = "") Then
-                MessageBox.Show("Selecciona una obra de salida")
-            End If
+        End If
 
 
-        Catch ex As Exception
 
-        End Try
-  
+        'AQUI SE REALIZARA LA ACTUALIZACIÓN
+
+
+
+
+
+
+
+
+
+
     End Sub
+
+ 
 End Class
