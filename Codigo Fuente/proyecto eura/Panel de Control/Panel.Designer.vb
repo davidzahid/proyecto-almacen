@@ -53,6 +53,8 @@ Partial Class Panel
         Me.lblLogin = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblSistema = New System.Windows.Forms.Label()
+        Me.ObraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionDeObrasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Movimientos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MovimientossistemaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,7 +74,7 @@ Partial Class Panel
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.EntradaToolStripMenuItem, Me.SalidaToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.EntradaToolStripMenuItem, Me.SalidaToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.ObraToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(841, 24)
@@ -261,6 +263,19 @@ Partial Class Panel
         Me.lblSistema.TabIndex = 11
         Me.lblSistema.Text = "Almacén EURA"
         '
+        'ObraToolStripMenuItem
+        '
+        Me.ObraToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDeObrasToolStripMenuItem})
+        Me.ObraToolStripMenuItem.Name = "ObraToolStripMenuItem"
+        Me.ObraToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
+        Me.ObraToolStripMenuItem.Text = "Obra"
+        '
+        'GestionDeObrasToolStripMenuItem
+        '
+        Me.GestionDeObrasToolStripMenuItem.Name = "GestionDeObrasToolStripMenuItem"
+        Me.GestionDeObrasToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.GestionDeObrasToolStripMenuItem.Text = "Gestión de Obras"
+        '
         'Panel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -317,4 +332,6 @@ Partial Class Panel
     Friend WithEvents lblSistema As System.Windows.Forms.Label
     Friend WithEvents GestionDeEmpleadosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GestionDeProveedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ObraToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GestionDeObrasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -19,7 +19,7 @@
             Panel.ReportesToolStripMenuItem.Enabled = True
             Panel.EmpleadosToolStripMenuItem.Visible = True
             Panel.EmpleadosToolStripMenuItem.Enabled = True
-
+            Panel.ObraToolStripMenuItem.Enabled = True
 
           
 
@@ -42,7 +42,7 @@
             Panel.ReportesToolStripMenuItem.Enabled = False
             Panel.EmpleadosToolStripMenuItem.Visible = False
             Panel.EmpleadosToolStripMenuItem.Enabled = False
-
+            Panel.ObraToolStripMenuItem.Enabled = False
             Panel.lblRol.Text = "Bienvenido Empleado"
             Panel.lblLogin.Text = "Usuario: " + Acceso.txtUsuario.Text
             Return False

@@ -1,5 +1,5 @@
 ﻿Public Class Acceso
-    Dim contador As Integer = 0
+    Public contador As Integer = 0
 
     Private Sub btnAcceder_Click(sender As Object, e As EventArgs) Handles btnAcceder.Click
         If (empleado(txtUsuario.Text, txtContrasena.Text)) Then
@@ -86,8 +86,9 @@
     End Sub
 
     Private Sub Acceso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtUsuario.Text = "Em14457"
-        txtContrasena.Text = "14747"
+        txtUsuario.Text = ""
+        txtContrasena.Text = ""
+
         'TODO: esta línea de código carga datos en la tabla 'Movimientos.movimientos_sistema' Puede moverla o quitarla según sea necesario.
         Me.Movimientos_sistemaTableAdapter.Fill(Me.Movimientos.movimientos_sistema)
         'TODO: esta línea de código carga datos en la tabla 'Movimientos.empleado' Puede moverla o quitarla según sea necesario.

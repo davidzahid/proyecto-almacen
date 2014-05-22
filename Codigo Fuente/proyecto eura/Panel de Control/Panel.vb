@@ -6,6 +6,7 @@
         'Limpiamos valores'
         Acceso.txtUsuario.Text = ""
         Acceso.txtContrasena.Text = ""
+        Acceso.contador = 0
         'Mostramos acceso nuevamente'
         'accesoadmin.Show()
         Acceso.Show()
@@ -84,5 +85,9 @@
     Private Sub GestionDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeProveedoresToolStripMenuItem.Click
         'FALTA DISEÑAR EL FORMULARIO DE EMPLEADOS'
         nuevoProveedor.Show()
+    End Sub
+
+    Private Sub GestionDeObrasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeObrasToolStripMenuItem.Click
+        gestionObras.Show()
     End Sub
 End Class

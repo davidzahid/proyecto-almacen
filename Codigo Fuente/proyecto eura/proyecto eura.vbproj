@@ -8,12 +8,12 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>proyecto_eura.My.MyApplication</StartupObject>
     <RootNamespace>proyecto_eura</RootNamespace>
-    <AssemblyName>Almacen Eura</AssemblyName>
+    <AssemblyName>proyecto eura</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\David Zahid\Documents\GitHub\proyecto-almacen\docs\</PublishUrl>
+    <PublishUrl>C:\Users\David Zahid\Documents\GitHub\proyecto-almacen\Instalador\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -38,7 +38,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Almacen Eura.xml</DocumentationFile>
+    <DocumentationFile>proyecto eura.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -48,7 +48,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Almacen Eura.xml</DocumentationFile>
+    <DocumentationFile>proyecto eura.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -154,6 +154,12 @@
     <Compile Include="Panel de Control\Vistas\Empleados\nuevoEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Panel de Control\Vistas\Obras\gestionObras.Designer.vb">
+      <DependentUpon>gestionObras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel de Control\Vistas\Obras\gestionObras.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Panel de Control\Vistas\Proveedores\nuevoProveedor.Designer.vb">
       <DependentUpon>nuevoProveedor.vb</DependentUpon>
     </Compile>
@@ -257,6 +263,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel de Control\Vistas\Obras\gestionObras.resx">
+      <DependentUpon>gestionObras.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control\Vistas\Proveedores\nuevoProveedor.resx">
       <DependentUpon>nuevoProveedor.vb</DependentUpon>
