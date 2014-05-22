@@ -8,6 +8,10 @@
     End Sub
 
     Private Sub nuevaSalida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'Movimientos.movimientos_sistema' Puede moverla o quitarla según sea necesario.
+        Me.Movimientos_sistemaTableAdapter.Fill(Me.Movimientos.movimientos_sistema)
+        'TODO: esta línea de código carga datos en la tabla 'Movimientos.empleado' Puede moverla o quitarla según sea necesario.
+        Me.EmpleadoTableAdapter.Fill(Me.Movimientos.empleado)
         'TODO: esta línea de código carga datos en la tabla 'Salidas.salida' Puede moverla o quitarla según sea necesario.
         Me.SalidaTableAdapter.Fill(Me.Salidas.salida)
         'TODO: esta línea de código carga datos en la tabla 'Salidas.obra_destino' Puede moverla o quitarla según sea necesario.
@@ -15,6 +19,38 @@
         'TODO: esta línea de código carga datos en la tabla 'Salidas.entrada' Puede moverla o quitarla según sea necesario.
         Me.EntradaTableAdapter.Fill(Me.Salidas.entrada)
 
+        'DATOS QUE SE ENVIARAN AL LOS MOVIMIENTOS DEL SISTEMA'
+
+        'GENERAR ID'
+        txtId2.Text = Val(Me.Movimientos_sistemaTableAdapter.identificador())
+        If txtId2.Text = "" Then
+            txtId2.Text = 0
+        End If
+        txtId2.Text = txtId2.Text + 1
+
+        'pasamos la id del usuario que haya accedido'
+        txtEmpleado.Text = Acceso.txtUsuario.Text
+        txtEmpleado.Text = Val(EmpleadoTableAdapter.idEmpleado(txtEmpleado.Text))
+        'VALIDAR AQUE PUESTO PERTENECE QUIEN ENTRO'
+
+
+        'pasamos el puesto del usuario que haya accedido
+        lblPuesto.Text = Acceso.txtUsuario.Text
+        lblPuesto.Text = Val(EmpleadoTableAdapter.tipoPuesto(lblPuesto.Text))
+        Dim numero As Integer = lblPuesto.Text
+        Select Case numero
+            Case 1
+                lblDescripcion.Text = "Salida GUARDADA por administrador: " + Acceso.txtUsuario.Text
+            Case Else
+                lblDescripcion.Text = "Salida GUARDADA por empleado: " + Acceso.txtUsuario.Text
+        End Select
+
+        'termina el validador de casos'
+        'generar fecha y hora actual del sistema
+        Dim timestamp As Date = Format(Now)
+        lblFecha.Text = timestamp.ToString(("dd/MM/yyyy HH:mm:ss"))
+
+        'TERMINA LOS DATOS ENVIADOS'
 
 
     End Sub
@@ -97,6 +133,11 @@
 
                     Me.SalidaTableAdapter.guardar_salida(txtId.Text, txtFecha.Text, txtUnidad.Text, txtObra.Text, txtNota.Text, txtNoSalidas.Text, txtNoNotaId.Text)
                     Me.SalidaTableAdapter.Fill(Me.Salidas.salida)
+
+                    'AQUI SE REGISTRA EL MOVIMIENTO'
+
+                    Me.Movimientos_sistemaTableAdapter.guarda_movimiento(lblTipo.Text, lblDescripcion.Text, lblFecha.Text, txtEmpleado.Text)
+                    Me.Movimientos_sistemaTableAdapter.Fill(Me.Movimientos.movimientos_sistema)
 
                     txtObra.Text = ""
                     txtNoSalidas.Text = ""
